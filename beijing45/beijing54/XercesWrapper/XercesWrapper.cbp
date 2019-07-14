@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="XercesWrapper" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="XercesWrapper" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DXERCESWRAPPER_EXPORTS" />
+					<Add option="-Wall" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Unit filename="XMLDataException.h" />
+		<Unit filename="XMLDefs.h" />
+		<Unit filename="XMLDocument.cpp" />
+		<Unit filename="XMLDocument.h" />
+		<Unit filename="XMLNode.cpp" />
+		<Unit filename="XMLNode.h" />
+		<Unit filename="XMLPlatform.h" />
+		<Unit filename="XMLValue.cpp" />
+		<Unit filename="XMLValue.h" />
+		<Unit filename="XercesWrapper.h" />
+		<Unit filename="XmlStringManager.cpp" />
+		<Unit filename="XmlStringManager.h" />
+		<Unit filename="tinystr.cpp" />
+		<Unit filename="tinystr.h" />
+		<Unit filename="tinyxml.cpp" />
+		<Unit filename="tinyxml.h" />
+		<Unit filename="tinyxmlerror.cpp" />
+		<Unit filename="tinyxmlparser.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

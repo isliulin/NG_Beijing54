@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ColorToolKit" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="../../LDebug/ColorToolKit" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="Debug Win32" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-D_LIB" />
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add directory="../XercesWrapper" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../XercesWrapper" />
+				</ResourceCompiler>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="../../LRelease/ColorToolKit" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../LRelease" />
+				<Option object_output="Release Win32" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_WINDOWS" />
+					<Add option="-D_LIB" />
+					<Add option="-W" />
+					<Add option="-O2" />
+					<Add directory="../XercesWrapper" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../XercesWrapper" />
+				</ResourceCompiler>
+			</Target>
+		</Build>
+		<Unit filename="../CommonTools/FileTools.cpp" />
+		<Unit filename="../CommonTools/FileTools.h" />
+		<Unit filename="../CommonTools/StringTools.cpp" />
+		<Unit filename="../CommonTools/StringTools.h" />
+		<Unit filename="ColorManagerBase.cpp" />
+		<Unit filename="ColorManagerBase.h" />
+		<Unit filename="ColorToolKit.h" />
+		<Unit filename="ContinuSectionColor.cpp" />
+		<Unit filename="ContinuSectionColor.h" />
+		<Unit filename="CreateColorManager.cpp" />
+		<Unit filename="CreateColorManager.h" />
+		<Unit filename="GradualColorManger.cpp" />
+		<Unit filename="GradualColorManger.h" />
+		<Unit filename="HelperHeader.cpp" />
+		<Unit filename="HelperHeader.h" />
+		<Unit filename="RGBHSLCalFun.cpp" />
+		<Unit filename="RGBHSLCalFun.h" />
+		<Unit filename="ScatterColorManger.cpp" />
+		<Unit filename="ScatterColorManger.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

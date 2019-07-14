@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<POSTIONS>
+    <Postion ID="1">
+        <lng>113.209289</lng>
+        <lat>23.396456</lat>
+        <Weight>9.769583</Weight>
+        <Radius>13.554757</Radius>
+    </Postion>
+    <Postion ID="2">
+        <lng>113.209268</lng>
+        <lat>23.396446</lat>
+        <Weight>9.563978</Weight>
+        <Radius>13.846156</Radius>
+    </Postion>
+    <Postion ID="3">
+        <lng>113.209235</lng>
+        <lat>23.396782</lat>
+        <Weight>5.427673</Weight>
+        <Radius>24.397994</Radius>
+    </Postion>
+    <Postion ID="4">
+        <lng>113.209327</lng>
+        <lat>23.396460</lat>
+        <Weight>8.583506</Weight>
+        <Radius>15.427767</Radius>
+    </Postion>
+    <Postion ID="5">
+        <lng>113.209170</lng>
+        <lat>23.396707</lat>
+        <Weight>7.699324</Weight>
+        <Radius>17.199476</Radius>
+    </Postion>
+    <Postion ID="6">
+        <lng>113.209238</lng>
+        <lat>23.396458</lat>
+        <Weight>11.032837</Weight>
+        <Radius>12.002745</Radius>
+    </Postion>
+    <Postion ID="7">
+        <lng>113.209242</lng>
+        <lat>23.396691</lat>
+        <Weight>9.286755</Weight>
+        <Radius>14.259484</Radius>
+    </Postion>
+    <Postion ID="8">
+        <lng>113.209222</lng>
+        <lat>23.396461</lat>
+        <Weight>11.447718</Weight>
+        <Radius>11.567749</Radius>
+    </Postion>
+    <Postion ID="9">
+        <lng>113.209089</lng>
+        <lat>23.396543</lat>
+        <Weight>8.973680</Weight>
+        <Radius>14.756970</Radius>
+    </Postion>
+    <Postion ID="10">
+        <lng>113.209223</lng>
+        <lat>23.396741</lat>
+        <Weight>6.655203</Weight>
+        <Radius>19.897866</Radius>
+    </Postion>
+    <Postion ID="11">
+        <lng>113.209227</lng>
+        <lat>23.396462</lat>
+        <Weight>11.559743</Weight>
+        <Radius>11.455646</Radius>
+    </Postion>
+</POSTIONS>

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1466319749 source:/mnt/hgfs/ShareCode/NewLDLib/HDFSResultManager/HDFSFileWR/HDFSFile.cpp
+	"HDFSFile.h"
+	<stdio.h>
+	<fcntl.h>
+
+1466318231 /mnt/hgfs/ShareCode/NewLDLib/HDFSResultManager/HDFSFileWR/HDFSFile.h
+	"hdfs.h"
+
+1466302044 /mnt/hgfs/ShareCode/NewLDLib/HDFSResultManager/HDFSFileWR/hdfs.h
+	<errno.h>
+	<fcntl.h>
+	<stdint.h>
+	<time.h>
+

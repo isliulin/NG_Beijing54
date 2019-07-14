@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BasicDef" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../LDebug/BasicDef" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../LDebug" />
+				<Option object_output="Debug Win32" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-fPIC" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_LIB" />
+					<Add option="-DERROR_ENGLISH" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="../../LRelease/BasicDef" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../../LRelease" />
+				<Option object_output="Release Win32" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-fPIC" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_LIB" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DERROR_ENGLISH" />
+		</Compiler>
+		<Unit filename="AntennaAngle.cpp" />
+		<Unit filename="AntennaAngle.h" />
+		<Unit filename="AutoSelectionTransModel .cpp" />
+		<Unit filename="AutoSelectionTransModel.h" />
+		<Unit filename="CListDataManager.h" />
+		<Unit filename="CheckFreqRelation.cpp" />
+		<Unit filename="CheckFreqRelation.h" />
+		<Unit filename="ColLocationResult.cpp" />
+		<Unit filename="ColLocationResult.h" />
+		<Unit filename="ControlModel.cpp" />
+		<Unit filename="ControlModel.h" />
+		<Unit filename="DataTypes.h" />
+		<Unit filename="GeoShape.cpp" />
+		<Unit filename="GeoShape.h" />
+		<Unit filename="GlobalDef.h" />
+		<Unit filename="GlobalFunction.cpp" />
+		<Unit filename="GlobalFunction.h" />
+		<Unit filename="IntBase.cpp" />
+		<Unit filename="IntBase.h" />
+		<Unit filename="MacroDef.h" />
+		<Unit filename="NGFrequencyConfilictCheckResult.cpp" />
+		<Unit filename="NGFrequencyConfilictCheckResult.h" />
+		<Unit filename="NGFrequencyOccupyResult.h" />
+		<Unit filename="NGFrequencyPreselResult.cpp" />
+		<Unit filename="NGFrequencyPreselResult.h" />
+		<Unit filename="NGProfileResult.cpp" />
+		<Unit filename="NGProfileResult.h" />
+		<Unit filename="NGSpectrumAnalysisResult.h" />
+		<Unit filename="NGToolsConvert.cpp" />
+		<Unit filename="NGToolsConvert.h" />
+		<Unit filename="NG_ErrorCode.cpp" />
+		<Unit filename="NG_ErrorCode.h" />
+		<Unit filename="NG_GetParamString.cpp" />
+		<Unit filename="NG_GetParamString.h" />
+		<Unit filename="PixelIterator.cpp" />
+		<Unit filename="PixelIterator.h" />
+		<Unit filename="ProtectRatio.cpp" />
+		<Unit filename="ProtectRatio.h" />
+		<Unit filename="QFunction.cpp" />
+		<Unit filename="QFunction.h" />
+		<Unit filename="ReadMe.txt" />
+		<Unit filename="ReportType.cpp" />
+		<Unit filename="ScanLineAlgorithm.cpp" />
+		<Unit filename="ScanLineAlgorithm.h" />
+		<Unit filename="StraightLine.cpp" />
+		<Unit filename="StraightLine.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

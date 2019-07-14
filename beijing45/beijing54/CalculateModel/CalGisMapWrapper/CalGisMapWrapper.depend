@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/CalGisMapWrapper.cpp
+	"CalGisMapWrapper.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/CalGisMapWrapper.h
+
+1425973047 source:/hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/CalGisProfile.cpp
+	<string.h>
+	"CalGisProfile.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/CalGisProfile.h
+	"CalGisMapWrapper.h"
+
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/ICalGisMapManager.cpp
+	"ICalGisMapManager.h"
+
+1425973047 /hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/ICalGisMapManager.h
+	"CalGisProfile.h"
+
+1426222931 source:/hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/NGCalGisMapManager.cpp
+	<stdio.h>
+	<string.h>
+	<math.h>
+	"NGCalGisMapManager.h"
+	"../KoordTrans/KoordTrans/KoordTrans.h"
+	"../EarthCoordCompute/EarthCoordManage.h"
+
+1425973047 /hgfs/ng_emc_api_X64/CalculateModel/CalGisMapWrapper/NGCalGisMapManager.h
+	"../NGMap/INGMapGeo.h"
+	"ICalGisMapManager.h"
+
+1426056852 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/INGMapGeo.h
+	<Windows.h>
+
+1425519504 /hgfs/ng_emc_api_X64/CalculateModel/KoordTrans/KoordTrans/KoordTrans.h
+
+1425519504 /hgfs/ng_emc_api_X64/CalculateModel/EarthCoordCompute/EarthCoordManage.h
+	"EarthCoordCompute.h"
+
+1425519504 /hgfs/ng_emc_api_X64/CalculateModel/EarthCoordCompute/EarthCoordCompute.h
+

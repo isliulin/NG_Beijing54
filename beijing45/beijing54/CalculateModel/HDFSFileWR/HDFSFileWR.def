@@ -1,0 +1,17 @@
+LIBRARY	"HDFSFileWR"
+EXPORTS
+
+ngfsNewBuilder
+ngfsBuilderSetNameNode
+ngfsBuilderSetNameNodePort
+ngfsBuilderConnect
+ngfsDisconnect
+ngfsFreeBuilder
+ngfsOpenFile
+ngfsCloseFile
+ngfsSeek
+ngfsTell
+ngfsRead
+ngfsPread
+ngfsWrite
+ngfsFlush

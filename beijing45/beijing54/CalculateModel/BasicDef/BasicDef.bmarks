@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<BrowseTracker_layout_file>
+	<ActiveTarget name="Release Win32" />
+	<File name="NGFrequencyConfilictCheckResult.h" open="0" top="0" tabpos="2">
+		<Cursor position="127" topLine="0" />
+	</File>
+	<File name="NGFrequencyConfilictCheckResult.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="149" topLine="0" />
+	</File>
+	<File name="NG_ErrorCode.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="2642" topLine="120" />
+	</File>
+</BrowseTracker_layout_file>

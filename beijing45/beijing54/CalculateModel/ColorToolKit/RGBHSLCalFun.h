@@ -1,0 +1,7 @@
+#pragma once
+
+//RGB转换为HSL
+void RGB2HSL(BYTE R, BYTE G, BYTE B, BYTE& H, BYTE& S, BYTE& L);
+
+//HSL转换为RGB
+void HSL2RGB(BYTE H, BYTE S, BYTE L, BYTE& R, BYTE& G, BYTE&B);

@@ -1,0 +1,78 @@
+# depslib dependency file v1.0
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/ContourModule/2DMemAllocator.cpp
+	"2DMemAllocator.h"
+	"HeadDefine.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/2DMemAllocator.h
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/HeadDefine.h
+	<string.h>
+
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/ContourModule/Contour.cpp
+	"ContourTracer.h"
+	"ContourValues.h"
+	"Contour.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourTracer.h
+	<vector>
+	"GeoStruct.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/GeoStruct.h
+	"HeadDefine.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourValues.h
+	<list>
+	<algorithm>
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/Contour.h
+	"ContourValues.h"
+	"GeoStruct.h"
+	"GeoData.h"
+	<vector>
+	<list>
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/GeoData.h
+	"GeoStruct.h"
+	<string>
+
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourGenerator.cpp
+	"ContourGenerator.h"
+	<stdio.h>
+	<stdlib.h>
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourGenerator.h
+	"GeoData.h"
+	"Contour.h"
+
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourModule.cpp
+	"ContourModule.h"
+	"../CalResultWrapper/RasterResult.h"
+	"ContourValues.h"
+	"ContourGenerator.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourModule.h
+	"ContourDll.h"
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourDll.h
+
+1425519513 /hgfs/ng_emc_api_X64/CalculateModel/CalResultWrapper/RasterResult.h
+	"../DataModel/EnumDef.h"
+	"CalResultWrapper.h"
+
+1425532505 /hgfs/ng_emc_api_X64/CalculateModel/DataModel/EnumDef.h
+
+1427264031 /hgfs/ng_emc_api_X64/CalculateModel/CalResultWrapper/CalResultWrapper.h
+
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourTracer.cpp
+	"ContourTracer.h"
+	"2DMemAllocator.h"
+
+1425519513 source:/hgfs/ng_emc_api_X64/CalculateModel/ContourModule/ContourValues.cpp
+	"ContourValues.h"
+
+1427700783 source:/hgfs/ng_emc_api_X64/CalculateModel/ContourModule/GeoData.cpp
+	<stdio.h>
+	"GeoData.h"
+	"2DMemAllocator.h"
+	"../CalResultWrapper/RasterResult.h"
+

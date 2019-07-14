@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1427682720 source:/hgfs/ng_emc_api_X64/CalculateModel/EarthCoordCompute/EarthCoordCompute.cpp
+	<string.h>
+	<math.h>
+	<stdlib.h>
+	"EarthCoordCompute.h"
+
+1425519504 /hgfs/ng_emc_api_X64/CalculateModel/EarthCoordCompute/EarthCoordCompute.h
+
+1425519504 source:/hgfs/ng_emc_api_X64/CalculateModel/EarthCoordCompute/EarthCoordManage.cpp
+	"EarthCoordCompute.h"
+	"EarthCoordManage.h"
+
+1425519504 /hgfs/ng_emc_api_X64/CalculateModel/EarthCoordCompute/EarthCoordManage.h
+	"EarthCoordCompute.h"
+

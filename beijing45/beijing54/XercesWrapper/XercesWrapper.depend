@@ -1,0 +1,940 @@
+# depslib dependency file v1.0
+1376289961 source:/mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLCallTrace.cpp
+	"XMLCallTrace.h"
+	<iostream>
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLCallTrace.h
+	<string>
+	<vector>
+
+1376293649 source:/mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLDocument.cpp
+	"XMLDocument.h"
+	<xercesc/dom/DOMWriter.hpp>
+	<xercesc/dom/DOMDocument.hpp>
+	<xercesc/dom/DOMBuilder.hpp>
+	<xercesc/dom/DOMImplementation.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+	<xercesc/util/XMLException.hpp>
+	<xercesc/util/XMLUniDefs.hpp>
+	<xercesc/dom/DOMImplementationRegistry.hpp>
+	<xercesc/framework/Wrapper4InputSource.hpp>
+	<xercesc/framework/MemBufFormatTarget.hpp>
+	<xercesc/framework/LocalFileFormatTarget.hpp>
+	"XMLCallTrace.h"
+	"XMLDocumentErrorHandler.h"
+	"XMLDataException.h"
+	"XMLStr.h"
+	"IStreamInputSource.h"
+	"ZIFStream.h"
+	"ZOFStream.h"
+
+1376293599 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLDocument.h
+	"XMLPlatform.h"
+	<string>
+	<sstream>
+	"XMLNode.h"
+	"XMLDefs.h"
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLPlatform.h
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLNode.h
+	"XMLPlatform.h"
+	<string>
+	"XMLValue.h"
+	"XMLDefs.h"
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLValue.h
+	"XMLPlatform.h"
+	<stdlib.h>
+	<string>
+	<limits>
+	<sstream>
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLDefs.h
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMWriter.hpp
+	<xercesc/dom/DOMNode.hpp>
+	<xercesc/dom/DOMWriterFilter.hpp>
+	<xercesc/dom/DOMErrorHandler.hpp>
+	<xercesc/framework/XMLFormatter.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMNode.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XercesDefs.hpp
+	<xercesc/util/XercesVersion.hpp>
+	<xercesc/util/AutoSense.hpp>
+	<xercesc/util/Platforms/Win32/Win32Defs.hpp>
+	<xercesc/util/Platforms/Cygwin/CygwinDefs.hpp>
+	<xercesc/util/Platforms/AIX/AIXDefs.hpp>
+	<xercesc/util/Platforms/Solaris/SolarisDefs.hpp>
+	<xercesc/util/Platforms/OpenServer/OpenServerDefs.hpp>
+	<xercesc/util/Platforms/UnixWare/UnixWareDefs.hpp>
+	<xercesc/util/Platforms/HPUX/HPUXDefs.hpp>
+	<xercesc/util/Platforms/IRIX/IRIXDefs.hpp>
+	<xercesc/util/Platforms/Interix/InterixDefs.hpp>
+	<xercesc/util/Platforms/Tandem/TandemDefs.hpp>
+	<xercesc/util/Platforms/BeOS/BeOSDefs.hpp>
+	<xercesc/util/Platforms/Linux/LinuxDefs.hpp>
+	<xercesc/util/Platforms/FreeBSD/FreeBSDDefs.hpp>
+	<xercesc/util/Platforms/OS390/OS390Defs.hpp>
+	<xercesc/util/Platforms/PTX/PTXDefs.hpp>
+	<xercesc/util/Platforms/OS2/OS2Defs.hpp>
+	<xercesc/util/Platforms/MacOS/MacOSDefs.hpp>
+	<xercesc/util/Platforms/OS400/OS400Defs.hpp>
+	<xercesc/util/Platforms/Tru64/Tru64Defs.hpp>
+	<xercesc/util/Platforms/QNX/QNXDefs.hpp>
+	<xercesc/util/Compilers/VCPPDefs.hpp>
+	<xercesc/util/Compilers/CSetDefs.hpp>
+	<xercesc/util/Compilers/BorlandCDefs.hpp>
+	<xercesc/util/Compilers/SunCCDefs.hpp>
+	<xercesc/util/Compilers/SCOCCDefs.hpp>
+	<xercesc/util/Compilers/SunKaiDefs.hpp>
+	<xercesc/util/Compilers/HPCCDefs.hpp>
+	<xercesc/util/Compilers/MIPSproDefs.hpp>
+	<xercesc/util/Compilers/TandemCCDefs.hpp>
+	<xercesc/util/Compilers/GCCDefs.hpp>
+	<xercesc/util/Compilers/MVSCPPDefs.hpp>
+	<xercesc/util/Compilers/IBMVAW32Defs.hpp>
+	<xercesc/util/Compilers/IBMVAOS2Defs.hpp>
+	<xercesc/util/Compilers/CodeWarriorDefs.hpp>
+	<xercesc/util/Compilers/PTXCCDefs.hpp>
+	<xercesc/util/Compilers/OS400SetDefs.hpp>
+	<xercesc/util/Compilers/DECCXXDefs.hpp>
+	<xercesc/util/Compilers/QCCDefs.hpp>
+	<xercesc/util/Platforms/NetBSD/NetBSDDefs.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XercesVersion.hpp
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/AutoSense.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/Win32/Win32Defs.hpp
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/Cygwin/CygwinDefs.hpp
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/AIX/AIXDefs.hpp
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/Solaris/SolarisDefs.hpp
+	<sys/isa_defs.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/OpenServer/OpenServerDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/UnixWare/UnixWareDefs.hpp
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/HPUX/HPUXDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/IRIX/IRIXDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/Interix/InterixDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/Tandem/TandemDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/BeOS/BeOSDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/Linux/LinuxDefs.hpp
+	<endian.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/FreeBSD/FreeBSDDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/OS390/OS390Defs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/PTX/PTXDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/OS2/OS2Defs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/MacOS/MacOSDefs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/OS400/OS400Defs.hpp
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/Tru64/Tru64Defs.hpp
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/QNX/QNXDefs.hpp
+	<gulliver.h>
+	<stdio.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/VCPPDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/CSetDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/BorlandCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/SunCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/SCOCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/SunKaiDefs.hpp
+	<memory.h>
+	<strings.h>
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/HPCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/MIPSproDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/TandemCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/GCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/MVSCPPDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/IBMVAW32Defs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/IBMVAOS2Defs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/CodeWarriorDefs.hpp
+	<wchar.h>
+	<wctype.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/PTXCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/OS400SetDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/DECCXXDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Compilers/QCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+	<inttypes.h>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/Platforms/NetBSD/NetBSDDefs.hpp
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMWriterFilter.hpp
+	<xercesc/dom/DOMNodeFilter.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMNodeFilter.hpp
+	<xercesc/dom/DOMNode.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMErrorHandler.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/framework/XMLFormatter.hpp
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/PlatformUtils.hpp
+	<xercesc/util/XMLException.hpp>
+	<xercesc/util/PanicHandler.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XMLException.hpp
+	<xercesc/util/XMemory.hpp>
+	<xercesc/util/XMLExceptMsgs.hpp>
+	<xercesc/util/XMLUni.hpp>
+	<xercesc/framework/XMLErrorReporter.hpp>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XMemory.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<stdlib.h>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XMLExceptMsgs.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMError.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMError.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XMLUni.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/framework/XMLErrorReporter.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/PanicHandler.hpp
+	<xercesc/util/XMemory.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMDocument.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMNode.hpp>
+	<xercesc/dom/DOMDocumentRange.hpp>
+	<xercesc/dom/DOMDocumentTraversal.hpp>
+	<xercesc/dom/DOMXPathEvaluator.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMDocumentRange.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMDocumentTraversal.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMXPathEvaluator.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMBuilder.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMImplementation.hpp
+	<xercesc/dom/DOMImplementationLS.hpp>
+	<xercesc/dom/DOMException.hpp>
+	<xercesc/dom/DOMRangeException.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMImplementationLS.hpp
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMException.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMRangeException.hpp
+	<xercesc/dom/DOMException.hpp>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XMLUniDefs.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMImplementationRegistry.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/framework/Wrapper4InputSource.hpp
+	<xercesc/dom/DOMInputSource.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289953 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMInputSource.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/framework/MemBufFormatTarget.hpp
+	<xercesc/framework/XMLFormatter.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/framework/LocalFileFormatTarget.hpp
+	<xercesc/framework/XMLFormatter.hpp>
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLDocumentErrorHandler.h
+	<string>
+	<sstream>
+	<xercesc/dom/DOMErrorHandler.hpp>
+	<xercesc/dom/DOMLocator.hpp>
+	"XMLStr.h"
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMLocator.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLStr.h
+	<xercesc/util/XMLString.hpp>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XMLString.hpp
+	<xercesc/util/BaseRefVectorOf.hpp>
+	<xercesc/framework/XMLBuffer.hpp>
+	<xercesc/framework/MemoryManager.hpp>
+	<string.h>
+	<assert.h>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/BaseRefVectorOf.hpp
+	<xercesc/util/ArrayIndexOutOfBoundsException.hpp>
+	<xercesc/util/XMLEnumerator.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+	<xercesc/framework/MemoryManager.hpp>
+	<xercesc/util/BaseRefVectorOf.c>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/ArrayIndexOutOfBoundsException.hpp
+	<xercesc/util/XMLException.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/XMLEnumerator.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/framework/MemoryManager.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<stdlib.h>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/BaseRefVectorOf.c
+	<xercesc/util/BaseRefVectorOf.hpp>
+
+1376289951 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/framework/XMLBuffer.hpp
+	<xercesc/util/XMemory.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+	<xercesc/framework/MemoryManager.hpp>
+	<string.h>
+
+1376289962 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLDataException.h
+	"XMLPlatform.h"
+	<string>
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/IStreamInputSource.h
+	<sstream>
+	<xercesc/util/BinInputStream.hpp>
+	<xercesc/sax/InputSource.hpp>
+
+1376289952 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/util/BinInputStream.hpp
+	<xercesc/util/XMemory.hpp>
+
+1376289950 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/sax/InputSource.hpp
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/ZIFStream.h
+	<sstream>
+	"ZFBuf.h"
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/ZFBuf.h
+	<sstream>
+	<zlib.h>
+
+1372752853 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/zlib/Linux/zlib.h
+	"zconf.h"
+
+1372752853 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/zlib/Linux/zconf.h
+	<windows.h>
+	<limits.h>
+	<sys/types.h>
+	<stdarg.h>
+	<stddef.h>
+	<unistd.h>
+	<unixio.h>
+
+1376289961 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/ZOFStream.h
+	<string.h>
+	<sstream>
+	<fstream>
+	"ZFBuf.h"
+
+1376289961 source:/mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLNode.cpp
+	"XMLNode.h"
+	<iomanip>
+	<xercesc/dom/DOMNode.hpp>
+	<xercesc/dom/DOMDocument.hpp>
+	<xercesc/dom/DOMElement.hpp>
+	<xercesc/dom/DOMText.hpp>
+	<xercesc/dom/DOMNodeList.hpp>
+	<xercesc/dom/DOMNamedNodeMap.hpp>
+	<xercesc/util/XMLString.hpp>
+	"XMLCallTrace.h"
+	"XMLDataException.h"
+	"XMLStr.h"
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMElement.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMNode.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMText.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMCharacterData.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMCharacterData.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMNode.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMNodeList.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289954 /mnt/hgfs/NG_EMC/3dPart/XercesWrapper/include/xercesc/dom/DOMNamedNodeMap.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289961 source:/mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/XMLValue.cpp
+	"XMLValue.h"
+	"XMLCallTrace.h"
+
+1376289961 source:/mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/ZFBuf.cpp
+	"ZFBuf.h"
+	<cstring>
+	<cstdio>
+
+1376289961 source:/mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/ZIFStream.cpp
+	"ZIFStream.h"
+
+1376289961 source:/mnt/hgfs/NG_EMC/3dPart/XercesWrapper/XercesWrapper/ZOFStream.cpp
+	"ZOFStream.h"
+
+1425630695 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/NGXMLMutex.cpp
+	"NGXMLMutex.h"
+	<Windows.h>
+	<fcntl.h>
+	<semaphore.h>
+
+1425630632 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/NGXMLMutex.h
+	<string>
+
+1376289962 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLCallTrace.cpp
+	"XMLCallTrace.h"
+	<iostream>
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLCallTrace.h
+	<string>
+	<vector>
+
+1423547835 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLDocument.cpp
+	"XMLDocument.h"
+	<xercesc/dom/DOMWriter.hpp>
+	<xercesc/dom/DOMDocument.hpp>
+	<xercesc/dom/DOMBuilder.hpp>
+	<xercesc/dom/DOMImplementation.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+	<xercesc/util/XMLException.hpp>
+	<xercesc/util/XMLUniDefs.hpp>
+	<xercesc/dom/DOMImplementationRegistry.hpp>
+	<xercesc/framework/Wrapper4InputSource.hpp>
+	<xercesc/framework/MemBufFormatTarget.hpp>
+	<xercesc/framework/LocalFileFormatTarget.hpp>
+	"XMLCallTrace.h"
+	"XMLDocumentErrorHandler.h"
+	"XMLDataException.h"
+	"XMLStr.h"
+	"IStreamInputSource.h"
+	"ZIFStream.h"
+	"ZOFStream.h"
+	"XMLMutexSem.h"
+
+1376293600 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLDocument.h
+	"XMLPlatform.h"
+	<string>
+	<sstream>
+	"XMLNode.h"
+	"XMLDefs.h"
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLPlatform.h
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLNode.h
+	"XMLPlatform.h"
+	<string>
+	"XMLValue.h"
+	"XMLDefs.h"
+
+1422520993 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLValue.h
+	"XMLPlatform.h"
+	<stdlib.h>
+	<string>
+	<limits>
+	<sstream>
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLDefs.h
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMWriter.hpp
+	<xercesc/dom/DOMNode.hpp>
+	<xercesc/dom/DOMWriterFilter.hpp>
+	<xercesc/dom/DOMErrorHandler.hpp>
+	<xercesc/framework/XMLFormatter.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMNode.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XercesDefs.hpp
+	<xercesc/util/XercesVersion.hpp>
+	<xercesc/util/AutoSense.hpp>
+	<xercesc/util/Platforms/Win32/Win32Defs.hpp>
+	<xercesc/util/Platforms/Cygwin/CygwinDefs.hpp>
+	<xercesc/util/Platforms/AIX/AIXDefs.hpp>
+	<xercesc/util/Platforms/Solaris/SolarisDefs.hpp>
+	<xercesc/util/Platforms/OpenServer/OpenServerDefs.hpp>
+	<xercesc/util/Platforms/UnixWare/UnixWareDefs.hpp>
+	<xercesc/util/Platforms/HPUX/HPUXDefs.hpp>
+	<xercesc/util/Platforms/IRIX/IRIXDefs.hpp>
+	<xercesc/util/Platforms/Interix/InterixDefs.hpp>
+	<xercesc/util/Platforms/Tandem/TandemDefs.hpp>
+	<xercesc/util/Platforms/BeOS/BeOSDefs.hpp>
+	<xercesc/util/Platforms/Linux/LinuxDefs.hpp>
+	<xercesc/util/Platforms/FreeBSD/FreeBSDDefs.hpp>
+	<xercesc/util/Platforms/OS390/OS390Defs.hpp>
+	<xercesc/util/Platforms/PTX/PTXDefs.hpp>
+	<xercesc/util/Platforms/OS2/OS2Defs.hpp>
+	<xercesc/util/Platforms/MacOS/MacOSDefs.hpp>
+	<xercesc/util/Platforms/OS400/OS400Defs.hpp>
+	<xercesc/util/Platforms/Tru64/Tru64Defs.hpp>
+	<xercesc/util/Platforms/QNX/QNXDefs.hpp>
+	<xercesc/util/Compilers/VCPPDefs.hpp>
+	<xercesc/util/Compilers/CSetDefs.hpp>
+	<xercesc/util/Compilers/BorlandCDefs.hpp>
+	<xercesc/util/Compilers/SunCCDefs.hpp>
+	<xercesc/util/Compilers/SCOCCDefs.hpp>
+	<xercesc/util/Compilers/SunKaiDefs.hpp>
+	<xercesc/util/Compilers/HPCCDefs.hpp>
+	<xercesc/util/Compilers/MIPSproDefs.hpp>
+	<xercesc/util/Compilers/TandemCCDefs.hpp>
+	<xercesc/util/Compilers/GCCDefs.hpp>
+	<xercesc/util/Compilers/MVSCPPDefs.hpp>
+	<xercesc/util/Compilers/IBMVAW32Defs.hpp>
+	<xercesc/util/Compilers/IBMVAOS2Defs.hpp>
+	<xercesc/util/Compilers/CodeWarriorDefs.hpp>
+	<xercesc/util/Compilers/PTXCCDefs.hpp>
+	<xercesc/util/Compilers/OS400SetDefs.hpp>
+	<xercesc/util/Compilers/DECCXXDefs.hpp>
+	<xercesc/util/Compilers/QCCDefs.hpp>
+	<xercesc/util/Platforms/NetBSD/NetBSDDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XercesVersion.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/AutoSense.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/Win32/Win32Defs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/Cygwin/CygwinDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/AIX/AIXDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/Solaris/SolarisDefs.hpp
+	<sys/isa_defs.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/OpenServer/OpenServerDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/UnixWare/UnixWareDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/HPUX/HPUXDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/IRIX/IRIXDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/Interix/InterixDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/Tandem/TandemDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/BeOS/BeOSDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/Linux/LinuxDefs.hpp
+	<endian.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/FreeBSD/FreeBSDDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/OS390/OS390Defs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/PTX/PTXDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/OS2/OS2Defs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/MacOS/MacOSDefs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/OS400/OS400Defs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/Tru64/Tru64Defs.hpp
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/QNX/QNXDefs.hpp
+	<gulliver.h>
+	<stdio.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/VCPPDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/CSetDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/BorlandCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/SunCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/SCOCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/SunKaiDefs.hpp
+	<memory.h>
+	<strings.h>
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/HPCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/MIPSproDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/TandemCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/GCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/MVSCPPDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/IBMVAW32Defs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/IBMVAOS2Defs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/CodeWarriorDefs.hpp
+	<wchar.h>
+	<wctype.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/PTXCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/OS400SetDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/DECCXXDefs.hpp
+	<sys/types.h>
+	<limits.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Compilers/QCCDefs.hpp
+	<sys/types.h>
+	<limits.h>
+	<inttypes.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/Platforms/NetBSD/NetBSDDefs.hpp
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMWriterFilter.hpp
+	<xercesc/dom/DOMNodeFilter.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMNodeFilter.hpp
+	<xercesc/dom/DOMNode.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMErrorHandler.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/framework/XMLFormatter.hpp
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/PlatformUtils.hpp
+	<xercesc/util/XMLException.hpp>
+	<xercesc/util/PanicHandler.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XMLException.hpp
+	<xercesc/util/XMemory.hpp>
+	<xercesc/util/XMLExceptMsgs.hpp>
+	<xercesc/util/XMLUni.hpp>
+	<xercesc/framework/XMLErrorReporter.hpp>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XMemory.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<stdlib.h>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XMLExceptMsgs.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMError.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMError.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XMLUni.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/framework/XMLErrorReporter.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/PanicHandler.hpp
+	<xercesc/util/XMemory.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMDocument.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMNode.hpp>
+	<xercesc/dom/DOMDocumentRange.hpp>
+	<xercesc/dom/DOMDocumentTraversal.hpp>
+	<xercesc/dom/DOMXPathEvaluator.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMDocumentRange.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMDocumentTraversal.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMXPathEvaluator.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMBuilder.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMImplementation.hpp
+	<xercesc/dom/DOMImplementationLS.hpp>
+	<xercesc/dom/DOMException.hpp>
+	<xercesc/dom/DOMRangeException.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMImplementationLS.hpp
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMException.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMRangeException.hpp
+	<xercesc/dom/DOMException.hpp>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XMLUniDefs.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMImplementationRegistry.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/framework/Wrapper4InputSource.hpp
+	<xercesc/dom/DOMInputSource.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMInputSource.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/framework/MemBufFormatTarget.hpp
+	<xercesc/framework/XMLFormatter.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/framework/LocalFileFormatTarget.hpp
+	<xercesc/framework/XMLFormatter.hpp>
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLDocumentErrorHandler.h
+	<string>
+	<sstream>
+	<xercesc/dom/DOMErrorHandler.hpp>
+	<xercesc/dom/DOMLocator.hpp>
+	"XMLStr.h"
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMLocator.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLStr.h
+	<xercesc/util/XMLString.hpp>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XMLString.hpp
+	<xercesc/util/BaseRefVectorOf.hpp>
+	<xercesc/framework/XMLBuffer.hpp>
+	<xercesc/framework/MemoryManager.hpp>
+	<string.h>
+	<assert.h>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/BaseRefVectorOf.hpp
+	<xercesc/util/ArrayIndexOutOfBoundsException.hpp>
+	<xercesc/util/XMLEnumerator.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+	<xercesc/framework/MemoryManager.hpp>
+	<xercesc/util/BaseRefVectorOf.c>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/ArrayIndexOutOfBoundsException.hpp
+	<xercesc/util/XMLException.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/XMLEnumerator.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/framework/MemoryManager.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<stdlib.h>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/BaseRefVectorOf.c
+	<xercesc/util/BaseRefVectorOf.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/framework/XMLBuffer.hpp
+	<xercesc/util/XMemory.hpp>
+	<xercesc/util/PlatformUtils.hpp>
+	<xercesc/framework/MemoryManager.hpp>
+	<string.h>
+
+1376289964 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLDataException.h
+	"XMLPlatform.h"
+	<string>
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/IStreamInputSource.h
+	<sstream>
+	<xercesc/util/BinInputStream.hpp>
+	<xercesc/sax/InputSource.hpp>
+
+1376289954 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/util/BinInputStream.hpp
+	<xercesc/util/XMemory.hpp>
+
+1376289950 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/sax/InputSource.hpp
+	<xercesc/util/PlatformUtils.hpp>
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/ZIFStream.h
+	<sstream>
+	"ZFBuf.h"
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/ZFBuf.h
+	<sstream>
+	<zlib.h>
+
+1372752854 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/zlib/Linux/zlib.h
+	"zconf.h"
+
+1372752854 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/zlib/Linux/zconf.h
+	<windows.h>
+	<limits.h>
+	<sys/types.h>
+	<stdarg.h>
+	<stddef.h>
+	<unistd.h>
+	<unixio.h>
+
+1376289962 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/ZOFStream.h
+	<string.h>
+	<sstream>
+	<fstream>
+	"ZFBuf.h"
+
+1423547795 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLMutexSem.h
+	<string>
+
+1422522514 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLNode.cpp
+	"XMLNode.h"
+	<iomanip>
+	<xercesc/dom/DOMNode.hpp>
+	<xercesc/dom/DOMDocument.hpp>
+	<xercesc/dom/DOMElement.hpp>
+	<xercesc/dom/DOMText.hpp>
+	<xercesc/dom/DOMNodeList.hpp>
+	<xercesc/dom/DOMNamedNodeMap.hpp>
+	<xercesc/util/XMLString.hpp>
+	"XMLCallTrace.h"
+	"XMLDataException.h"
+	"XMLStr.h"
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMElement.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMNode.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMText.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMCharacterData.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMCharacterData.hpp
+	<xercesc/util/XercesDefs.hpp>
+	<xercesc/dom/DOMNode.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMNodeList.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289956 /mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/include/xercesc/dom/DOMNamedNodeMap.hpp
+	<xercesc/util/XercesDefs.hpp>
+
+1376289962 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLValue.cpp
+	"XMLValue.h"
+	"XMLCallTrace.h"
+
+1376289962 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/ZFBuf.cpp
+	"ZFBuf.h"
+	<cstring>
+	<cstdio>
+
+1376289962 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/ZIFStream.cpp
+	"ZIFStream.h"
+
+1376289962 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/ZOFStream.cpp
+	"ZOFStream.h"
+
+1426557081 source:/mnt/hgfs/NGEMCWindow/EMC_Monitor/EMCAnalysis/XercesWrapper/XercesWrapper/XMLMutexSem.cpp
+	"XMLMutexSem.h"
+	<Windows.h>
+	<fcntl.h>
+	<semaphore.h>
+

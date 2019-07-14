@@ -1,0 +1,22 @@
+
+#ifndef NG_DATA_PROCESS_ERROR_CODE_H
+#define NG_DATA_PROCESS_ERROR_CODE_H
+
+#define SUCCESS 0//成功
+#define BASECODE 100
+#define FAIL_TO_OPEN_FILE BASECODE+1//打开文件失败
+#define MEMORY_WRONG BASECODE+2//申请内存失败
+#define POINT_CAN_NOT_NULL BASECODE+3//指针为空
+#define PARAM_WRONG BASECODE+4//参数错误
+#define FAIL_TO_WRITE_FILE BASECODE+5//写文件失败
+#define DB_NULL BASECODE+6//数据库为空
+#define FILE_FORM_WRONG BASECODE+7//文件格式错误
+#define TIME_OUT_RANGE BASECODE+8//超过授权时间
+#define NO_SOURCE_FILE BASECODE+9//没有源文件
+#define DRIVER_TEST_POINT_NOT_ENOUGTH BASECODE+10//路测点太少
+#define NO_PARAM BASECODE +11 //没有输入参数
+#define NO_TRAGET_FREQ_FILE BASECODE + 12 //没有对应的频点文件
+#define NG_COLOR_RANGE BASECODE + 13    //获取配色方案失败
+#define FAIL_TO_READ_FILE BASECODE +14    //读文件失败
+#define DILUTE_BAND_SMALLER BASECODE +15 //稀释频段小于原频段
+#endif
