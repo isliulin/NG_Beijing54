@@ -44,7 +44,11 @@ int CStandScanFreqMonitorFile::ReadStandv1(const char *filename)
 	{
 		return NG_MONITORFILE_OPEN_ERROR;//文件不存在
 	}
-	FILE* fp = fopen(filename,"rb");
+	if (fp==NULL||strcmp(filename, tempfilename) != 0) // 判断是否处理同一个文件，继续上次未完的读取
+	{
+		fp = fopen(filename, "rb");
+		tempfilename = filename;
+	}
 	if (NULL == fp)
 	{
 		return NG_MONITORFILE_OPEN_ERROR;//打开文件失败
@@ -55,9 +59,10 @@ int CStandScanFreqMonitorFile::ReadStandv1(const char *filename)
 	unsigned __int64 maxfreq; //目前hz
 	unsigned __int64 minfreq; //目前hz
 	bool bfirst=true;
-
-	while(feof(fp) == 0)
+	int countRecord = 0;//开始新一轮的读取，计数器归0
+	while(feof(fp) == 0&&countRecord<=40) //每次读取10000 条数据
 	{
+		countRecord++;
 		bool shouldswap = false;
 		StandBinHeadV1 head;
 		fread(&head,1,sizeof(head),fp);
@@ -139,13 +144,24 @@ int CStandScanFreqMonitorFile::ReadStandv1(const char *filename)
 		mDatas.push_back(item);
 	
 	}
+	
+	printf("取得的记录为：%d\n",countRecord);
     if(mDatas.size()>0)
     {
        m_dFreqMhzMin=minfreq/1000000.0;
        m_dFreqMhzMax=maxfreq/1000000.0;
     }
-	fclose(fp);
-	return NG_SUCCESS;
+	if (feof(fp) != 0)
+	{
+		fclose(fp);
+		tempfilename = NULL;
+		return NG_SUCCESS;
+	}
+	else 
+	{
+		return NEED_READ_AGAIN ;
+	}
+	
 }
 
 

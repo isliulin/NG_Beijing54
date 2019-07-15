@@ -8,6 +8,8 @@
 
 
 /**********************公共错误码*******************************/
+#define NEED_READ_AGAIN -100
+
 #define NG_UNKNOWN_ERROR                   -1    //其他的错误都返回-1
 #define NG_SUCCESS                         0//成功
 

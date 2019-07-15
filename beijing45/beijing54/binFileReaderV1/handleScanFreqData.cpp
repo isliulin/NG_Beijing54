@@ -8,13 +8,14 @@ handleScanFreqData::handleScanFreqData(string name)
 	maxy = 0.0;
 	minx = 10000000.0;
 	miny = 10000000.0;
+	mScanFreqData->reserve(10000);
 	
 }
-void handleScanFreqData::handleData()
+int handleScanFreqData::handleData()
 {
 	printf("1");
 	CScanFreqMonitorFile G_cMonitorScanInfo;
-	G_cMonitorScanInfo.ReadFile_Reserve(name.c_str());
+	int returnCode=G_cMonitorScanInfo.ReadFile_Reserve(name.c_str());
 	double *pFrequenceyMHZ =G_cMonitorScanInfo.m_pFrequencyMHz;
 	int valueInTimeSize = G_cMonitorScanInfo.m_nValueInTimeSize;
 	ValueInTime *pvalueInTime =G_cMonitorScanInfo.m_pValueInTime;
@@ -158,5 +159,20 @@ void handleScanFreqData::handleData()
 	}
 	
 	
+	return returnCode;
+}
 
+void  handleScanFreqData::clear() 
+{
+	maxx = 0.0;
+	maxy = 0.0;
+	minx = 10000000.0;
+	miny = 10000000.0;
+	mScanFreqData->clear();
+	mScanFreqData->shrink_to_fit();
+}
+
+handleScanFreqData::~handleScanFreqData() 
+{
+	clear();
 }

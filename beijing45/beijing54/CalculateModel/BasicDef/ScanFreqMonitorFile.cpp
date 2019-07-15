@@ -489,7 +489,7 @@ int CScanFreqMonitorFile::ReadStandV1_Reserve( const char *filename,eScanFreqFor
 {
 	CStandScanFreqMonitorFile standfile(headtype);
 	int ErrCode = standfile.ReadFile(filename);
-	if(ErrCode!=NG_SUCCESS)
+	if(ErrCode!=NG_SUCCESS&&ErrCode!=NEED_READ_AGAIN)
 	{
 		return ErrCode;
 	}
@@ -600,8 +600,12 @@ int CScanFreqMonitorFile::ReadStandV1_Reserve( const char *filename,eScanFreqFor
 #ifdef MONITORFORMAT_TO_DBM
 	m_DataType=0;
 #endif
-
-	return NG_SUCCESS;
+	if (ErrCode == NEED_READ_AGAIN)
+		return ErrCode;
+	else
+	{ 
+		return NG_SUCCESS; 
+	}
 }
 
 

@@ -2,6 +2,7 @@
 #include "../BasicDef/GlobalFunction.h"
 #define DATA_LEVEL 5
 #include <math.h>
+#include "../CalculateModel/BasicDef/NG_ErrorCode.h"
 spliteRoadData::spliteRoadData(string efName,string bfName)
 {
 	
@@ -39,14 +40,14 @@ spliteRoadData::spliteRoadData(string efName,string bfName)
 	//int a = 1;
 }
 
-void spliteRoadData::readBIN()
+int spliteRoadData::readBIN()
 {
 
 	////处理bin文件，将结果以vector容器返回
 	
-	hsfd->handleData();
+	int flag=hsfd->handleData();
 	mFreqData = hsfd->mScanFreqData;
-
+	return flag;
 }
 void spliteRoadData::readExcel()
 {
@@ -91,13 +92,19 @@ void spliteRoadData::generateNode()
 	int rd_row = 0;
 	int sfd_col = 0;
 	int sfd_row = 0;
+
+
+
 	rowNum = CalDistanseM(minx,maxy,minx,miny,true)/DATA_LEVEL+1;
 	colNum = CalDistanseM(maxx, miny, minx, miny, true) /DATA_LEVEL + 1;
 	int positionMove = (int)log10(colNum)+1;
 	printf("行数为：%d，列数为：%d",rowNum,colNum);
+	
+	
+
+	readExcel();
 	vector<roadData>::iterator it_rd = mRoadData[0].begin();
-	vector<scanFreqData>::iterator it_sfd = mFreqData[0].begin();
-	while (it_rd!=mRoadData[0].end()||it_sfd!=mFreqData[0].end()) 
+	while (it_rd!=mRoadData[0].end()) 
 	{
 		if (it_rd != mRoadData[0].end())
 		{
@@ -152,89 +159,96 @@ void spliteRoadData::generateNode()
 
 			}
 		}
-		if (it_sfd != mFreqData[0].end()) 
-		{
-			scanFreqData sfd = *it_sfd;
-			sfd_col = CalDistanseM(sfd.lon, miny, minx, miny, true) / DATA_LEVEL + 1;
-			sfd_row = CalDistanseM(minx, sfd.lat, minx, miny, true) / DATA_LEVEL + 1;
-			long int index = sfd_row*pow(10, positionMove) + sfd_col;
-
-			map<long int, roadNode>::iterator it_map = nodeData[0].find(index);
-			if (it_map != nodeData[0].end())
-			{
-			
-				bin++;
-				double temp_LonAll = 0.0;
-				double temp_latAll = 0.0;
-				double temp_1 = 0.0;
-				double temp_2 = 0.0;
-				double temp_3 = 0.0;
-				double temp_4 = 0.0;
-				double temp_5 = 0.0;
-				double temp_6 = 0.0;
-				double temp_7 = 0.0;
-				double temp_8 = 0.0;
-				
-				roadNode rn = nodeData[0][index];
-				//更新经度
-				temp_LonAll = rn.lon*rn.roadNodeNum;
-				temp_LonAll += sfd.lon;
-				rn.lon = temp_LonAll / (rn.roadNodeNum + 1);
-
-				//更新纬度
-				temp_latAll = rn.lat*rn.roadNodeNum;
-				temp_latAll += sfd.lat;
-				rn.lat = temp_latAll / (rn.roadNodeNum + 1);
-				//更新业务1
-				temp_1 = rn.serNo1*rn.roadNodeNum;
-				temp_1 += sfd.severiceNo1;
-				rn.serNo1 = temp_1 / (rn.roadNodeNum + 1);
-				//更新业务2
-				temp_2 = rn.serNo2*rn.roadNodeNum;
-				temp_2 += sfd.severiceNo2;
-				rn.serNo2 = temp_2 / (rn.roadNodeNum + 1);
-				//更新业务3
-				temp_3 = rn.serNo3*rn.roadNodeNum;
-				temp_3 += sfd.severiceNo3;
-				rn.serNo3 = temp_3 / (rn.roadNodeNum + 1);
-				//更新业务4
-				temp_4 = rn.serNo4*rn.roadNodeNum;
-				temp_4 += sfd.severiceNo4;
-				rn.serNo4 = temp_4 / (rn.roadNodeNum + 1);
-				//更新业务5
-				temp_5 = rn.serNo5*rn.roadNodeNum;
-				temp_5 += sfd.severiceNo5;
-				rn.serNo5 = temp_5 / (rn.roadNodeNum + 1);
-				//更新业务6
-				temp_6 = rn.serNo6*rn.roadNodeNum;
-				temp_6 += sfd.severiceNo6;
-				rn.serNo6 = temp_6 / (rn.roadNodeNum + 1);
-				//更新业务7
-				temp_7 = rn.serNo7*rn.roadNodeNum;
-				temp_7 += sfd.severiceNo7;
-				rn.serNo7 = temp_7 / (rn.roadNodeNum + 1);
-				//更新业务8
-				temp_8 = rn.serNo8*rn.roadNodeNum;
-				temp_8 += sfd.severiceNo8;
-				rn.serNo8 = temp_8 / (rn.roadNodeNum + 1);
-
-				//node 增加
-				rn.roadNodeNum += 1;
-				rn.binNodeNum += 1;
-
-				nodeData[0].erase(it_map);
-				nodeData[0].insert(pair<long int, roadNode>(index, rn));
-				it_sfd++;
-			}
-			else
-			{
-				roadNode temp;
-				nodeData[0].insert(pair<long int, roadNode>(index, temp));
-
-			}
-		}
-		
 	}
+	while (readBIN() == NEED_READ_AGAIN) 
+	{
+		vector<scanFreqData>::iterator it_sfd = mFreqData[0].begin();
+		while (it_sfd != mFreqData[0].end()) 
+		{
+			if (it_sfd != mFreqData[0].end())
+			{
+				scanFreqData sfd = *it_sfd;
+				sfd_col = CalDistanseM(sfd.lon, miny, minx, miny, true) / DATA_LEVEL + 1;
+				sfd_row = CalDistanseM(minx, sfd.lat, minx, miny, true) / DATA_LEVEL + 1;
+				long int index = sfd_row*pow(10, positionMove) + sfd_col;
 
+				map<long int, roadNode>::iterator it_map = nodeData[0].find(index);
+				if (it_map != nodeData[0].end())
+				{
+
+					bin++;
+					double temp_LonAll = 0.0;
+					double temp_latAll = 0.0;
+					double temp_1 = 0.0;
+					double temp_2 = 0.0;
+					double temp_3 = 0.0;
+					double temp_4 = 0.0;
+					double temp_5 = 0.0;
+					double temp_6 = 0.0;
+					double temp_7 = 0.0;
+					double temp_8 = 0.0;
+
+					roadNode rn = nodeData[0][index];
+					//更新经度
+					temp_LonAll = rn.lon*rn.roadNodeNum;
+					temp_LonAll += sfd.lon;
+					rn.lon = temp_LonAll / (rn.roadNodeNum + 1);
+
+					//更新纬度
+					temp_latAll = rn.lat*rn.roadNodeNum;
+					temp_latAll += sfd.lat;
+					rn.lat = temp_latAll / (rn.roadNodeNum + 1);
+					//更新业务1
+					temp_1 = rn.serNo1*rn.roadNodeNum;
+					temp_1 += sfd.severiceNo1;
+					rn.serNo1 = temp_1 / (rn.roadNodeNum + 1);
+					//更新业务2
+					temp_2 = rn.serNo2*rn.roadNodeNum;
+					temp_2 += sfd.severiceNo2;
+					rn.serNo2 = temp_2 / (rn.roadNodeNum + 1);
+					//更新业务3
+					temp_3 = rn.serNo3*rn.roadNodeNum;
+					temp_3 += sfd.severiceNo3;
+					rn.serNo3 = temp_3 / (rn.roadNodeNum + 1);
+					//更新业务4
+					temp_4 = rn.serNo4*rn.roadNodeNum;
+					temp_4 += sfd.severiceNo4;
+					rn.serNo4 = temp_4 / (rn.roadNodeNum + 1);
+					//更新业务5
+					temp_5 = rn.serNo5*rn.roadNodeNum;
+					temp_5 += sfd.severiceNo5;
+					rn.serNo5 = temp_5 / (rn.roadNodeNum + 1);
+					//更新业务6
+					temp_6 = rn.serNo6*rn.roadNodeNum;
+					temp_6 += sfd.severiceNo6;
+					rn.serNo6 = temp_6 / (rn.roadNodeNum + 1);
+					//更新业务7
+					temp_7 = rn.serNo7*rn.roadNodeNum;
+					temp_7 += sfd.severiceNo7;
+					rn.serNo7 = temp_7 / (rn.roadNodeNum + 1);
+					//更新业务8
+					temp_8 = rn.serNo8*rn.roadNodeNum;
+					temp_8 += sfd.severiceNo8;
+					rn.serNo8 = temp_8 / (rn.roadNodeNum + 1);
+
+					//node 增加
+					rn.roadNodeNum += 1;
+					rn.binNodeNum += 1;
+
+					nodeData[0].erase(it_map);
+					nodeData[0].insert(pair<long int, roadNode>(index, rn));
+					it_sfd++;
+				}
+				else
+				{
+					roadNode temp;
+					nodeData[0].insert(pair<long int, roadNode>(index, temp));
+
+				}
+			}
+		
+		}
+		hsfd->clear();
+	}
 	printf("excel : %d, bin :%d",excel,bin);
 }

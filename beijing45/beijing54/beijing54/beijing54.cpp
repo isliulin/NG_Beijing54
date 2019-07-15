@@ -2,7 +2,9 @@
 #include <Windows.h>
 #include <iostream>
 #include <fstream>
+#include "../CalculateModel/BasicDef/NG_ErrorCode.h"
 #include "ScanFreqMonitorFile.h"
+#include "StandScanFreqMonitorFile.h"
 #include "handleScanFreqData.h"
 #include "binDataDef.h"
 #include "../splitByDistance/spliteRdByDist.h"
@@ -22,9 +24,6 @@ int main()
 	//
 	//
 	spliteRoadData *srd = new spliteRoadData(filename,filename1);
-	srd->readBIN();
-	srd->readExcel();
-	srd->getMaxRect();
 	srd->generateNode();
 	vector<roadData> *rd = srd->mRoadData;
 	vector<scanFreqData> *sfd = srd->mFreqData;

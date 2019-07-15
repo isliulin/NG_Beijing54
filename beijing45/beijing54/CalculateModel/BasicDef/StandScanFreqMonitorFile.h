@@ -116,11 +116,13 @@ typedef struct StandDataItem
 }StandDataItem;
 
 
-
+static FILE *fp;
+static const char *tempfilename;
 //国家路测读取类
 class CStandScanFreqMonitorFile
 {
 public:
+	
 	CStandScanFreqMonitorFile(eScanFreqFormat format = eUnknown);
 	virtual ~CStandScanFreqMonitorFile();
 	int ReadFileHead(const char*filename);

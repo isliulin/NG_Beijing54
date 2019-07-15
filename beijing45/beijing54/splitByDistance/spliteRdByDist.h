@@ -32,7 +32,7 @@ public :
 	spliteRoadData(string excelFileName,string binFileName);
 	~spliteRoadData();
 
-	void readBIN();
+	int readBIN();
 	void readExcel();
 	void getMaxRect();
 	void generateNode();

@@ -1,5 +1,6 @@
 #pragma once
 #include "../CalculateModel/BasicDef/ScanFreqMonitorFile.h"
+#include"../CalculateModel//BasicDef/StandScanFreqMonitorFile.h"
 #include "binDataDef.h"
 #include <iostream>
 #include <vector>
@@ -15,8 +16,10 @@ public:
 public :
 	vector<scanFreqData> *mScanFreqData = new vector<scanFreqData>[1];
 public:
-	void handleData();
+	int handleData();
 	handleScanFreqData(string name);
+	~handleScanFreqData();
+	void clear();
 
 };
 
