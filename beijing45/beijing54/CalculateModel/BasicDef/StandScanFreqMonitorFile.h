@@ -2,6 +2,7 @@
 #define _STANDSCANFREQMONITORFILE_H_
 #include <string.h>
 #include <vector>
+#include <iostream>
 enum eScanFreqFormat
 {
 	eUnknown=-1,
@@ -117,7 +118,7 @@ typedef struct StandDataItem
 
 
 static FILE *fp;
-static const char *tempfilename;
+static std::string tempfilename;
 //国家路测读取类
 class CStandScanFreqMonitorFile
 {

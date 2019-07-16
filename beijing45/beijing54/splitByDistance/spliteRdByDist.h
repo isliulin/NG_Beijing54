@@ -16,6 +16,8 @@
 class SPLITE_API spliteRoadData 
 {
 private:
+	int needReadExcel;
+	int needReadBin;
 	handleRoadData *hrd;
 	handleScanFreqData *hsfd;
 public:
@@ -31,9 +33,12 @@ public:
 public :
 	spliteRoadData(string excelFileName,string binFileName);
 	~spliteRoadData();
-
+	void setHsfdName(string name) { this->hsfd->setName(name); }
 	int readBIN();
 	void readExcel();
 	void getMaxRect();
 	void generateNode();
+	void setNeedReadExcel(int num) { this->needReadExcel = num; }
+	void setNeedReadBin(int num) { this->needReadBin = num; }
+
 };

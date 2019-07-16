@@ -2,6 +2,8 @@
 
 struct roadNode
 {
+	int colNum;
+	int rowNum;
 	double lon;
 	double lat;
 	double serNo1;
@@ -19,6 +21,8 @@ struct roadNode
 	int binNodeNum;
 	roadNode()
 	{
+		colNum = 0;
+		rowNum = 0;
 		lon=0.0;
 		lat=0.0;
 		serNo1=0.0;

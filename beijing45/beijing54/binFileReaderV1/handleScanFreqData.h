@@ -19,6 +19,7 @@ public:
 	int handleData();
 	handleScanFreqData(string name);
 	~handleScanFreqData();
+	void setName(string name) { this->name = name; }
 	void clear();
 
 };

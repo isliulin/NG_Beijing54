@@ -223,8 +223,8 @@ struct ValueInTime
 	ngtime tTime;
 	float* pdLevelValue;
 	long nValueNumber;
-	float lon;
-	float lat;
+	double lon;
+	double lat;
 	//float height;
 	ValueInTime();
 	ValueInTime(long nValueNumber);

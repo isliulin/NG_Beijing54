@@ -8,12 +8,11 @@ handleScanFreqData::handleScanFreqData(string name)
 	maxy = 0.0;
 	minx = 10000000.0;
 	miny = 10000000.0;
-	mScanFreqData->reserve(10000);
+	mScanFreqData->reserve(3000);
 	
 }
 int handleScanFreqData::handleData()
 {
-	printf("1");
 	CScanFreqMonitorFile G_cMonitorScanInfo;
 	int returnCode=G_cMonitorScanInfo.ReadFile_Reserve(name.c_str());
 	double *pFrequenceyMHZ =G_cMonitorScanInfo.m_pFrequencyMHz;
@@ -24,11 +23,6 @@ int handleScanFreqData::handleData()
 	{
 		double lon = pvalueInTime[i].lon;
 		double lat = pvalueInTime[i].lat;
-		minx = minx < lon ? minx : lon;
-		maxx = maxx > lon ? maxx : lon;
-		miny = miny < lat ? miny : lat;
-		maxy = maxy > lat ? maxy : lat;
-		
 		//ÒôÆµ¹ã²¥
 		double ser11 = 0.0; //ÖÐ²¨µ÷·ù¹ã²¥
 		double ser12 = 0.0; //¶Ì²¨µ÷·ù¹ã²¥

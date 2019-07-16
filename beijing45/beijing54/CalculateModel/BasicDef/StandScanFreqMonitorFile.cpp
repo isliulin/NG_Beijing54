@@ -44,10 +44,14 @@ int CStandScanFreqMonitorFile::ReadStandv1(const char *filename)
 	{
 		return NG_MONITORFILE_OPEN_ERROR;//文件不存在
 	}
-	if (fp==NULL||strcmp(filename, tempfilename) != 0) // 判断是否处理同一个文件，继续上次未完的读取
+	string temp = filename;
+	if (fp==NULL || strcmp(temp.c_str(), tempfilename.c_str()) != 0) // 判断是否处理同一个文件，继续上次未完的读取
 	{
+		if(fp!=NULL)
+			fclose(fp);
 		fp = fopen(filename, "rb");
-		tempfilename = filename;
+		
+		tempfilename = temp;
 	}
 	if (NULL == fp)
 	{
@@ -60,7 +64,7 @@ int CStandScanFreqMonitorFile::ReadStandv1(const char *filename)
 	unsigned __int64 minfreq; //目前hz
 	bool bfirst=true;
 	int countRecord = 0;//开始新一轮的读取，计数器归0
-	while(feof(fp) == 0&&countRecord<=40) //每次读取10000 条数据
+	while(feof(fp) == 0&&countRecord<=800) //每次读取6000 条数据
 	{
 		countRecord++;
 		bool shouldswap = false;
@@ -105,7 +109,23 @@ int CStandScanFreqMonitorFile::ReadStandv1(const char *filename)
 			swap(&head.freqstep,sizeof(head.freqstep));
 			swap(&head.freqcount,sizeof(head.freqcount));
 		}
-
+		double curlng = head.lon > head.lat ? head.lon : head.lat;
+		double curlat = head.lat < head.lon ? head.lat : head.lon;
+		head.lon = curlng;
+		head.lat = curlat;
+		if (head.lon < 10 || head.lat < 10 || head.lon>180 || head.lat>50)
+		{
+			int nRes = fseek(fp, 2 * head.freqcount, SEEK_CUR);
+			if (nRes == 0) 
+			{
+				continue;
+			}
+			else 
+			{
+				fclose(fp);
+				return FAIL_TO_READ_FILE;
+			}
+		}
 		StandDataItem * item;
 		bool check = true;
 		CATCHNEW(item = new StandDataItem(head.freqcount),check);
@@ -154,7 +174,7 @@ int CStandScanFreqMonitorFile::ReadStandv1(const char *filename)
 	if (feof(fp) != 0)
 	{
 		fclose(fp);
-		tempfilename = NULL;
+		tempfilename = "";
 		return NG_SUCCESS;
 	}
 	else 
