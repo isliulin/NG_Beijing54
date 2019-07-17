@@ -5,7 +5,17 @@
 #include "../CalculateModel/BasicDef/NG_ErrorCode.h"
 spliteRoadData::spliteRoadData(string efName,string bfName)
 {
-	
+	outfileBin=ofstream("newBin.txt");
+	outfileBin << "[Vector]" << endl;
+	outfileBin << "Name=Polyline" << endl;
+	outfileBin << "Description" << endl;
+	outfileBin << endl;
+	outfileBin << "DescriptionEnd" << endl;
+	outfileBin << "LineWidth=1" << endl;
+	outfileBin << "LineColor=0x000000" << endl;
+	outfileBin << "type=3" << endl;
+	outfileBin << "isClosed=0" << endl;
+	outfileBin << "VertexNumber" << endl;
 	needReadBin = 0;
 	needReadExcel = 0;
 	minx = 0.0;
@@ -164,81 +174,83 @@ void spliteRoadData::generateNode()
 			vector<scanFreqData>::iterator it_sfd = mFreqData[0].begin();
 			while (it_sfd != mFreqData[0].end())
 			{
+		
 				scanFreqData sfd = *it_sfd;
-				sfd_col = (int)(CalDistanseM(sfd.lon, miny, minx, miny, true) / DATA_LEVEL)+ 1;
-				sfd_row =(int)(CalDistanseM(minx, sfd.lat, minx, miny, true) / DATA_LEVEL) + 1;
-				long int index =(long int)( sfd_row*pow(10, positionMove)) + sfd_col;
+				outfileBin << "pVertex x=" << std::setprecision(11) << sfd.lon << ',' << "y=" << std::setprecision(11) << sfd.lat << endl;
+			//	sfd_col = (int)(CalDistanseM(sfd.lon, miny, minx, miny, true) / DATA_LEVEL)+ 1;
+			//	sfd_row =(int)(CalDistanseM(minx, sfd.lat, minx, miny, true) / DATA_LEVEL) + 1;
+			//	long int index =(long int)( sfd_row*pow(10, positionMove)) + sfd_col;
 
-				//map<long int, roadNode>::iterator it_map = nodeData[0].find(index);
-				if (nodeData[0].count(index) == 0)
-				{
-					roadNode temp;
-					nodeData[0].insert(pair<long int, roadNode>(index, temp));
-				}
-				bin++;
-				double temp_LonAll = 0.0;
-				double temp_latAll = 0.0;
-				double temp_1 = 0.0;
-				double temp_2 = 0.0;
-				double temp_3 = 0.0;
-				double temp_4 = 0.0;
-				double temp_5 = 0.0;
-				double temp_6 = 0.0;
-				double temp_7 = 0.0;
-				double temp_8 = 0.0;
+			//	//map<long int, roadNode>::iterator it_map = nodeData[0].find(index);
+			//	if (nodeData[0].count(index) == 0)
+			//	{
+			//		roadNode temp;
+			//		nodeData[0].insert(pair<long int, roadNode>(index, temp));
+			//	}
+			//	bin++;
+			//	double temp_LonAll = 0.0;
+			//	double temp_latAll = 0.0;
+			//	double temp_1 = 0.0;
+			//	double temp_2 = 0.0;
+			//	double temp_3 = 0.0;
+			//	double temp_4 = 0.0;
+			//	double temp_5 = 0.0;
+			//	double temp_6 = 0.0;
+			//	double temp_7 = 0.0;
+			//	double temp_8 = 0.0;
 
-				roadNode rn = nodeData[0][index];
-				//更新经度
-				rn.colNum = sfd_col;
-				rn.rowNum = sfd_row;
-				temp_LonAll = rn.lon*rn.roadNodeNum;
-				temp_LonAll += sfd.lon;
-				rn.lon = temp_LonAll / (rn.roadNodeNum + 1);
+			//	roadNode rn = nodeData[0][index];
+			//	//更新经度
+			//	rn.colNum = sfd_col;
+			//	rn.rowNum = sfd_row;
+			//	temp_LonAll = rn.lon*rn.roadNodeNum;
+			//	temp_LonAll += sfd.lon;
+			//	rn.lon = temp_LonAll / (rn.roadNodeNum + 1);
 
-				//更新纬度
-				temp_latAll = rn.lat*rn.roadNodeNum;
-				temp_latAll += sfd.lat;
-				rn.lat = temp_latAll / (rn.roadNodeNum + 1);
-				//更新业务1
-				temp_1 = rn.serNo1*rn.roadNodeNum;
-				temp_1 += sfd.severiceNo1;
-				rn.serNo1 = temp_1 / (rn.roadNodeNum + 1);
-				//更新业务2
-				temp_2 = rn.serNo2*rn.roadNodeNum;
-				temp_2 += sfd.severiceNo2;
-				rn.serNo2 = temp_2 / (rn.roadNodeNum + 1);
-				//更新业务3
-				temp_3 = rn.serNo3*rn.roadNodeNum;
-				temp_3 += sfd.severiceNo3;
-				rn.serNo3 = temp_3 / (rn.roadNodeNum + 1);
-				//更新业务4
-				temp_4 = rn.serNo4*rn.roadNodeNum;
-				temp_4 += sfd.severiceNo4;
-				rn.serNo4 = temp_4 / (rn.roadNodeNum + 1);
-				//更新业务5
-				temp_5 = rn.serNo5*rn.roadNodeNum;
-				temp_5 += sfd.severiceNo5;
-				rn.serNo5 = temp_5 / (rn.roadNodeNum + 1);
-				//更新业务6
-				temp_6 = rn.serNo6*rn.roadNodeNum;
-				temp_6 += sfd.severiceNo6;
-				rn.serNo6 = temp_6 / (rn.roadNodeNum + 1);
-				//更新业务7
-				temp_7 = rn.serNo7*rn.roadNodeNum;
-				temp_7 += sfd.severiceNo7;
-				rn.serNo7 = temp_7 / (rn.roadNodeNum + 1);
-				//更新业务8
-				temp_8 = rn.serNo8*rn.roadNodeNum;
-				temp_8 += sfd.severiceNo8;
-				rn.serNo8 = temp_8 / (rn.roadNodeNum + 1);
+			//	//更新纬度
+			//	temp_latAll = rn.lat*rn.roadNodeNum;
+			//	temp_latAll += sfd.lat;
+			//	rn.lat = temp_latAll / (rn.roadNodeNum + 1);
+			//	//更新业务1
+			//	temp_1 = rn.serNo1*rn.roadNodeNum;
+			//	temp_1 += sfd.severiceNo1;
+			//	rn.serNo1 = temp_1 / (rn.roadNodeNum + 1);
+			//	//更新业务2
+			//	temp_2 = rn.serNo2*rn.roadNodeNum;
+			//	temp_2 += sfd.severiceNo2;
+			//	rn.serNo2 = temp_2 / (rn.roadNodeNum + 1);
+			//	//更新业务3
+			//	temp_3 = rn.serNo3*rn.roadNodeNum;
+			//	temp_3 += sfd.severiceNo3;
+			//	rn.serNo3 = temp_3 / (rn.roadNodeNum + 1);
+			//	//更新业务4
+			//	temp_4 = rn.serNo4*rn.roadNodeNum;
+			//	temp_4 += sfd.severiceNo4;
+			//	rn.serNo4 = temp_4 / (rn.roadNodeNum + 1);
+			//	//更新业务5
+			//	temp_5 = rn.serNo5*rn.roadNodeNum;
+			//	temp_5 += sfd.severiceNo5;
+			//	rn.serNo5 = temp_5 / (rn.roadNodeNum + 1);
+			//	//更新业务6
+			//	temp_6 = rn.serNo6*rn.roadNodeNum;
+			//	temp_6 += sfd.severiceNo6;
+			//	rn.serNo6 = temp_6 / (rn.roadNodeNum + 1);
+			//	//更新业务7
+			//	temp_7 = rn.serNo7*rn.roadNodeNum;
+			//	temp_7 += sfd.severiceNo7;
+			//	rn.serNo7 = temp_7 / (rn.roadNodeNum + 1);
+			//	//更新业务8
+			//	temp_8 = rn.serNo8*rn.roadNodeNum;
+			//	temp_8 += sfd.severiceNo8;
+			//	rn.serNo8 = temp_8 / (rn.roadNodeNum + 1);
 
-				//node 增加
-				rn.roadNodeNum += 1;
-				rn.binNodeNum += 1;
+			//	//node 增加
+			//	rn.roadNodeNum += 1;
+			//	rn.binNodeNum += 1;
 
-				//nodeData[0].erase(it_map);
-				//nodeData[0].insert(pair<long int, roadNode>(index, rn));
-				nodeData[0][index] = rn;
+			//	//nodeData[0].erase(it_map);
+			//	//nodeData[0].insert(pair<long int, roadNode>(index, rn));
+			//	nodeData[0][index] = rn;
 				it_sfd++;
 			}
 			hsfd->clear();
@@ -249,80 +261,81 @@ void spliteRoadData::generateNode()
 			while (it_sfd != mFreqData[0].end())
 			{
 				scanFreqData sfd = *it_sfd;
-				sfd_col = (int)(CalDistanseM(sfd.lon, miny, minx, miny, true) / DATA_LEVEL) + 1;
-				sfd_row = (int)(CalDistanseM(minx, sfd.lat, minx, miny, true) / DATA_LEVEL) + 1;
-				long int index = (long int)(sfd_row*pow(10, positionMove)) + sfd_col;
+				outfileBin << "pVertex x=" << std::setprecision(11) << sfd.lon << ',' << "y=" << std::setprecision(11) << sfd.lat << endl;
+				//sfd_col = (int)(CalDistanseM(sfd.lon, miny, minx, miny, true) / DATA_LEVEL) + 1;
+				//sfd_row = (int)(CalDistanseM(minx, sfd.lat, minx, miny, true) / DATA_LEVEL) + 1;
+				//long int index = (long int)(sfd_row*pow(10, positionMove)) + sfd_col;
 
-				//map<long int, roadNode>::iterator it_map = nodeData[0].find(index);
-				if (nodeData[0].count(index))
-				{
-					roadNode temp;
-					nodeData[0].insert(pair<long int, roadNode>(index, temp));
-				}
-				bin++;
-				double temp_LonAll = 0.0;
-				double temp_latAll = 0.0;
-				double temp_1 = 0.0;
-				double temp_2 = 0.0;
-				double temp_3 = 0.0;
-				double temp_4 = 0.0;
-				double temp_5 = 0.0;
-				double temp_6 = 0.0;
-				double temp_7 = 0.0;
-				double temp_8 = 0.0;
+				////map<long int, roadNode>::iterator it_map = nodeData[0].find(index);
+				//if (nodeData[0].count(index))
+				//{
+				//	roadNode temp;
+				//	nodeData[0].insert(pair<long int, roadNode>(index, temp));
+				//}
+				//bin++;
+				//double temp_LonAll = 0.0;
+				//double temp_latAll = 0.0;
+				//double temp_1 = 0.0;
+				//double temp_2 = 0.0;
+				//double temp_3 = 0.0;
+				//double temp_4 = 0.0;
+				//double temp_5 = 0.0;
+				//double temp_6 = 0.0;
+				//double temp_7 = 0.0;
+				//double temp_8 = 0.0;
 
-				roadNode rn = nodeData[0][index];
-				//更新经度
-				rn.colNum = sfd_col;
-				rn.rowNum = sfd_row;
-				temp_LonAll = rn.lon*rn.roadNodeNum;
-				temp_LonAll += sfd.lon;
-				rn.lon = temp_LonAll / (rn.roadNodeNum + 1);
+				//roadNode rn = nodeData[0][index];
+				////更新经度
+				//rn.colNum = sfd_col;
+				//rn.rowNum = sfd_row;
+				//temp_LonAll = rn.lon*rn.roadNodeNum;
+				//temp_LonAll += sfd.lon;
+				//rn.lon = temp_LonAll / (rn.roadNodeNum + 1);
 
-				//更新纬度
-				temp_latAll = rn.lat*rn.roadNodeNum;
-				temp_latAll += sfd.lat;
-				rn.lat = temp_latAll / (rn.roadNodeNum + 1);
-				//更新业务1
-				temp_1 = rn.serNo1*rn.roadNodeNum;
-				temp_1 += sfd.severiceNo1;
-				rn.serNo1 = temp_1 / (rn.roadNodeNum + 1);
-				//更新业务2
-				temp_2 = rn.serNo2*rn.roadNodeNum;
-				temp_2 += sfd.severiceNo2;
-				rn.serNo2 = temp_2 / (rn.roadNodeNum + 1);
-				//更新业务3
-				temp_3 = rn.serNo3*rn.roadNodeNum;
-				temp_3 += sfd.severiceNo3;
-				rn.serNo3 = temp_3 / (rn.roadNodeNum + 1);
-				//更新业务4
-				temp_4 = rn.serNo4*rn.roadNodeNum;
-				temp_4 += sfd.severiceNo4;
-				rn.serNo4 = temp_4 / (rn.roadNodeNum + 1);
-				//更新业务5
-				temp_5 = rn.serNo5*rn.roadNodeNum;
-				temp_5 += sfd.severiceNo5;
-				rn.serNo5 = temp_5 / (rn.roadNodeNum + 1);
-				//更新业务6
-				temp_6 = rn.serNo6*rn.roadNodeNum;
-				temp_6 += sfd.severiceNo6;
-				rn.serNo6 = temp_6 / (rn.roadNodeNum + 1);
-				//更新业务7
-				temp_7 = rn.serNo7*rn.roadNodeNum;
-				temp_7 += sfd.severiceNo7;
-				rn.serNo7 = temp_7 / (rn.roadNodeNum + 1);
-				//更新业务8
-				temp_8 = rn.serNo8*rn.roadNodeNum;
-				temp_8 += sfd.severiceNo8;
-				rn.serNo8 = temp_8 / (rn.roadNodeNum + 1);
+				////更新纬度
+				//temp_latAll = rn.lat*rn.roadNodeNum;
+				//temp_latAll += sfd.lat;
+				//rn.lat = temp_latAll / (rn.roadNodeNum + 1);
+				////更新业务1
+				//temp_1 = rn.serNo1*rn.roadNodeNum;
+				//temp_1 += sfd.severiceNo1;
+				//rn.serNo1 = temp_1 / (rn.roadNodeNum + 1);
+				////更新业务2
+				//temp_2 = rn.serNo2*rn.roadNodeNum;
+				//temp_2 += sfd.severiceNo2;
+				//rn.serNo2 = temp_2 / (rn.roadNodeNum + 1);
+				////更新业务3
+				//temp_3 = rn.serNo3*rn.roadNodeNum;
+				//temp_3 += sfd.severiceNo3;
+				//rn.serNo3 = temp_3 / (rn.roadNodeNum + 1);
+				////更新业务4
+				//temp_4 = rn.serNo4*rn.roadNodeNum;
+				//temp_4 += sfd.severiceNo4;
+				//rn.serNo4 = temp_4 / (rn.roadNodeNum + 1);
+				////更新业务5
+				//temp_5 = rn.serNo5*rn.roadNodeNum;
+				//temp_5 += sfd.severiceNo5;
+				//rn.serNo5 = temp_5 / (rn.roadNodeNum + 1);
+				////更新业务6
+				//temp_6 = rn.serNo6*rn.roadNodeNum;
+				//temp_6 += sfd.severiceNo6;
+				//rn.serNo6 = temp_6 / (rn.roadNodeNum + 1);
+				////更新业务7
+				//temp_7 = rn.serNo7*rn.roadNodeNum;
+				//temp_7 += sfd.severiceNo7;
+				//rn.serNo7 = temp_7 / (rn.roadNodeNum + 1);
+				////更新业务8
+				//temp_8 = rn.serNo8*rn.roadNodeNum;
+				//temp_8 += sfd.severiceNo8;
+				//rn.serNo8 = temp_8 / (rn.roadNodeNum + 1);
 
-				//node 增加
-				rn.roadNodeNum += 1;
-				rn.binNodeNum += 1;
+				////node 增加
+				//rn.roadNodeNum += 1;
+				//rn.binNodeNum += 1;
 
-				//nodeData[0].erase(it_map);
-				//nodeData[0].insert(pair<long int, roadNode>(index, rn));
-				nodeData[0][index] = rn;
+				////nodeData[0].erase(it_map);
+				////nodeData[0].insert(pair<long int, roadNode>(index, rn));
+				//nodeData[0][index] = rn;
 				it_sfd++;
 			}
 			hsfd->clear();

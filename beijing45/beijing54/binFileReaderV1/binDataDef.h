@@ -14,7 +14,7 @@ struct scanFreqData
 	scanFreqData() 
 	{
 	
-		lon=0.00;
+		lon=0.0;
 		lat=0.0;
 		severiceNo1=0.0;
 		severiceNo2=0.0;

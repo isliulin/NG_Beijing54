@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include "../CalculateModel/BasicDef/NG_ErrorCode.h"
 #include "ScanFreqMonitorFile.h"
 #include "StandScanFreqMonitorFile.h"
@@ -10,6 +11,7 @@
 #include "../splitByDistance/spliteRdByDist.h"
 #include <string>
 #include <stdio.h>
+
 #include "../splitByDistance/dataDef.h"
 int main()
 {
@@ -55,24 +57,34 @@ int main()
 	ofstream outfileExcel("excelData.txt",ios::out);
 	ofstream outfileBin("binData.txt", ios::out);
 	ofstream outfileNode("NodeData.txt", ios::out);
+	outfileExcel << "[Vector]"<< endl;
+	outfileExcel << "Name=Polyline" << endl;
+	outfileExcel << "Description" << endl;
+	outfileExcel << endl;
+	outfileExcel << "DescriptionEnd" << endl;
+	outfileExcel << "LineWidth=1" << endl;
+	outfileExcel << "LineColor=0x000000" << endl;
+	outfileExcel << "type=3" << endl;
+	outfileExcel << "isClosed=0" << endl;
+	outfileExcel << "VertexNumber" << endl;
 	for (auto it = rd[0].begin(); it != rd[0].end(); it++) 
 	{
 		roadData temp1 = *it;
-		outfileExcel << temp1.mLng << ',' << temp1.mLat << ',' << temp1.mElectric << ',' << temp1.mBattery << endl;
+		outfileExcel <<"pVertex x="<< std::setprecision(11) << temp1.mLng << ',' << "y=" << std::setprecision(11)<<temp1.mLat << endl;
 	}
 	outfileExcel.close();
-	for (auto it = sfd[0].begin(); it != sfd[0].end(); it++)
+	/*for (auto it = sfd[0].begin(); it != sfd[0].end(); it++)
 	{
 		scanFreqData temp2 = *it;
 		outfileBin << temp2.lon << ',' << temp2.lat << ',' << temp2.severiceNo1 << ',' << temp2.severiceNo2 << ',' << temp2.severiceNo3<< ',' << temp2.severiceNo4 << ',' << temp2.severiceNo5 << ',' << temp2.severiceNo6 << ',' << temp2.severiceNo7 << ',' << temp2.severiceNo8 << ',' << endl;
 	}
-	outfileBin.close();
-	for (auto it = rn[0].begin(); it != rn[0].end(); it++)
+	outfileBin.close();*/
+	/*for (auto it = rn[0].begin(); it != rn[0].end(); it++)
 	{
 		roadNode temp2 = it->second;
-		outfileNode << temp2.colNum << ',' << temp2.rowNum << ','<<temp2.excelNodeNum<<','<<temp2.binNodeNum<<endl;
+		outfileNode<< std::setprecision(11)<< temp2.lon << ','<< std::setprecision(11) <<temp2.lat << ',' << temp2.colNum << ',' << temp2.rowNum << ','<<temp2.excelNodeNum<<','<<temp2.binNodeNum<<','<< std::setprecision(11)<<temp2.serNo1 << ',' << std::setprecision(11) << temp2.serNo2 << ',' << std::setprecision(11) << temp2.serNo3 << ',' << std::setprecision(11) << temp2.serNo4 << ',' << std::setprecision(11) << temp2.serNo5 << ',' << std::setprecision(11) << temp2.serNo6 << ',' << std::setprecision(11) << temp2.serNo7 << ',' << std::setprecision(11) << temp2.serNo8 <<endl;;
 	}
-	outfileNode.close();
+	outfileNode.close();*/
 	
 	int a = 1;
 	

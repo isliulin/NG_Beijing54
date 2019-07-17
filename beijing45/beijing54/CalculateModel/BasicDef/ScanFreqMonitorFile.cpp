@@ -20,8 +20,8 @@ ValueInTime::ValueInTime()
 {
 	pdLevelValue = NULL;
 	nValueNumber = 0;
-	//lon=0;
-	//lat=0;
+	lon=0;
+	lat=0;
 	//height=0;
 }
 ValueInTime::ValueInTime(long nValueNumber)
@@ -39,8 +39,8 @@ ValueInTime::ValueInTime(long nValueNumber)
 		}
 	    memset(pdLevelValue, 0, sizeof(float)*nValueNumber);
 	}
-	//lon=0;
-	//lat=0;
+	lon=0;
+	lat=0;
 	//height=0;
 }
 //copy¹¹Ôìº¯Êý
@@ -70,8 +70,8 @@ ValueInTime::ValueInTime(const ValueInTime& scmValueInTime)
 	{
         this->nValueNumber=0;
 	}
-	//this->lon=scmValueInTime.lon;
-//	this->lat=scmValueInTime.lat;
+	this->lon=scmValueInTime.lon;
+	this->lat=scmValueInTime.lat;
 	//this->height=scmValueInTime.height;
 	
 }
@@ -109,8 +109,8 @@ ValueInTime& ValueInTime::operator=(const ValueInTime& scmValueInTime)
 	{
        nValueNumber=0;
 	}
-	//lon=scmValueInTime.lon;
-	//lat=scmValueInTime.lat;
+	lon=scmValueInTime.lon;
+	lat=scmValueInTime.lat;
 	//height=scmValueInTime.height;
 
 	return (*this);

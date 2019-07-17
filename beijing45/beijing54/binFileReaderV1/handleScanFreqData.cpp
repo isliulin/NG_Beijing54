@@ -8,7 +8,7 @@ handleScanFreqData::handleScanFreqData(string name)
 	maxy = 0.0;
 	minx = 10000000.0;
 	miny = 10000000.0;
-	mScanFreqData->reserve(3000);
+	mScanFreqData->reserve(1000);
 	
 }
 int handleScanFreqData::handleData()

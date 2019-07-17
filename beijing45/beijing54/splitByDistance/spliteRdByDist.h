@@ -12,7 +12,9 @@
 #include "../binFileReaderV1/binDataDef.h"
 #include "dataDef.h"
 #include <map>
-
+#include <iostream>
+#include <fstream>
+#include <iomanip>
 class SPLITE_API spliteRoadData 
 {
 private:
@@ -20,6 +22,8 @@ private:
 	int needReadBin;
 	handleRoadData *hrd;
 	handleScanFreqData *hsfd;
+	ofstream outfileBin; 
+	
 public:
 	double minx;
 	double miny;
