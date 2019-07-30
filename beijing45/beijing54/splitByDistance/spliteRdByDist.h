@@ -11,7 +11,10 @@
 #include "../xlsxFileReader/libexcel/include_cpp/libxl.h"
 #include "../binFileReaderV1/binDataDef.h"
 #include "dataDef.h"
+#include "../CalculateModel/BasicDef/NG_ErrorCode.h"
+#include "../CalculateModel/CalResultWrapper/RasterResult.h"
 #include <map>
+
 
 class SPLITE_API spliteRoadData 
 {
@@ -40,5 +43,20 @@ public :
 	void generateNode();
 	void setNeedReadExcel(int num) { this->needReadExcel = num; }
 	void setNeedReadBin(int num) { this->needReadBin = num; }
+private:
+
+	RasterResult *ngz_ser1;
+	RasterResult *ngz_ser2;
+	RasterResult *ngz_ser3;
+	RasterResult *ngz_ser4;
+	RasterResult *ngz_ser5;
+	RasterResult *ngz_ser6;
+	RasterResult *ngz_ser7;
+	RasterResult *ngz_ser8;
+	RasterResult *ngz_Elec;
+public:
+	
+	void generateRaster();
+
 
 };

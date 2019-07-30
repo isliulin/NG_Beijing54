@@ -14,6 +14,7 @@ struct roadNode
 	double serNo6;
 	double serNo7;
 	double serNo8;
+	double serCount;
 	double elec;
 	double battery;
 	int excelNodeNum;
@@ -33,6 +34,7 @@ struct roadNode
 		serNo6=0.0;
 		serNo7=0.0;
 		serNo8=0.0;
+		serCount = 0.0;
 		elec=0.0;
 		battery=0.0;
 		excelNodeNum = 0;

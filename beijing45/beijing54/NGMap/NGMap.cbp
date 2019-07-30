@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="NGMap" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="../../LDebug/NGMap" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug Win32" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-W" />
+					<Add option="-O0" />
+					<Add option="-fPIC" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_USRDLL" />
+					<Add option="-DNGMAP_EXPORTS" />
+				</Compiler>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="../../LRelease/NGMap" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release Win32" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-W" />
+					<Add option="-fPIC" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_USRDLL" />
+					<Add option="-DNGMAP_EXPORTS" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../CommonTools/FileTools.cpp" />
+		<Unit filename="../CommonTools/FileTools.h" />
+		<Unit filename="../CommonTools/RWMemMap.cpp" />
+		<Unit filename="../CommonTools/RWMemMap.h" />
+		<Unit filename="../CommonTools/StringTools.cpp" />
+		<Unit filename="../CommonTools/StringTools.h" />
+		<Unit filename="CHSStdioFile.cpp" />
+		<Unit filename="CHSStdioFile.h" />
+		<Unit filename="ComplexMatricx.cpp" />
+		<Unit filename="ComplexMatricx.h" />
+		<Unit filename="INGMapGeo.cpp" />
+		<Unit filename="INGMapGeo.h" />
+		<Unit filename="MapType.cpp" />
+		<Unit filename="MapType.h" />
+		<Unit filename="NGMapGeo.cpp" />
+		<Unit filename="NGMapGeo.h" />
+		<Unit filename="NGPyramidMapGeo.cpp" />
+		<Unit filename="NGPyramidMapGeo.h" />
+		<Unit filename="ParentChild.cpp" />
+		<Unit filename="ParentChild.h" />
+		<Unit filename="ReadMe.txt" />
+		<Unit filename="XRWMemMap.cpp" />
+		<Unit filename="XRWMemMap.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

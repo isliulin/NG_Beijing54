@@ -21,6 +21,7 @@ int handleScanFreqData::handleData()
 	scanFreqData sfd;
 	for (int i = 0; i < valueInTimeSize; i++)
 	{
+		double serCount = 0.0;
 		double lon = pvalueInTime[i].lon;
 		double lat = pvalueInTime[i].lat;
 		//ÒôÆµ¹ã²¥
@@ -135,6 +136,7 @@ int handleScanFreqData::handleData()
 					ser311 += levelValue;
 				}
 			}
+			serCount += levelValue;
 		}
 		sfd.lat = lat;
 		sfd.lon = lon;
@@ -146,7 +148,7 @@ int handleScanFreqData::handleData()
 		sfd.severiceNo6 = ser33 + ser34 + ser35 + ser36;
 		sfd.severiceNo7 = ser37;
 		sfd.severiceNo8 = ser38 + ser39 + ser310 + ser311;
-
+		sfd.severiceCount = serCount;
 
 		mScanFreqData[0].push_back(sfd);
 	

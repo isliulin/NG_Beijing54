@@ -1,0 +1,130 @@
+# depslib dependency file v1.0
+1425519507 source:/hgfs/ng_emc_api_X64/CalculateModel/CommonTools/FileTools.cpp
+	"FileTools.h"
+	"StringTools.h"
+	<wchar.h>
+	<stdio.h>
+	<string.h>
+	<io.h>
+	<unistd.h>
+
+1425519507 /hgfs/ng_emc_api_X64/CalculateModel/CommonTools/FileTools.h
+
+1425519507 /hgfs/ng_emc_api_X64/CalculateModel/CommonTools/StringTools.h
+	<string>
+
+1425519507 source:/hgfs/ng_emc_api_X64/CalculateModel/CommonTools/RWMemMap.cpp
+	"RWMemMap.h"
+	<windows.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/mman.h>
+
+1426056852 /hgfs/ng_emc_api_X64/CalculateModel/CommonTools/RWMemMap.h
+
+1425519507 source:/hgfs/ng_emc_api_X64/CalculateModel/CommonTools/StringTools.cpp
+	"StringTools.h"
+	<stdlib.h>
+	<windows.h>
+	<unistd.h>
+
+1425519514 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/CHSStdioFile.cpp
+	<locale.h>
+	<string.h>
+	"CHSStdioFile.h"
+
+1425519514 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/CHSStdioFile.h
+	<fstream>
+
+1426062968 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/ComplexMatricx.cpp
+	<math.h>
+	<map>
+	<vector>
+	<string.h>
+	<stdlib.h>
+	<stdio.h>
+	"../CommonTools/StringTools.h"
+	"../CommonTools/FileTools.h"
+	"ComplexMatricx.h"
+	"XRWMemMap.h"
+	"../XMemoryMap/XMutexSem.h"
+	<assert.h>
+	<tiffio.h>
+
+1426056852 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/ComplexMatricx.h
+	<string>
+	"../CommonTools/RWMemMap.h"
+
+1426059717 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/XRWMemMap.h
+	"../commontools/rwmemmap.h"
+	<string>
+
+1425519512 /hgfs/ng_emc_api_X64/CalculateModel/XMemoryMap/XMutexSem.h
+	"XMemoryMapHead.h"
+	<string>
+
+1425519512 /hgfs/ng_emc_api_X64/CalculateModel/XMemoryMap/XMemoryMapHead.h
+
+1425519514 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/INGMapGeo.cpp
+	<stdio.h>
+	<string.h>
+	"INGMapGeo.h"
+
+1426056852 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/INGMapGeo.h
+	<Windows.h>
+
+1425519514 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/MapType.cpp
+	<stdio.h>
+	"NGMapGeo.h"
+	"MapType.h"
+
+1426056852 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/NGMapGeo.h
+	"INGMapGeo.h"
+	"ComplexMatricx.h"
+
+1425519514 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/MapType.h
+	<string>
+
+1426061872 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/NGMapGeo.cpp
+	<math.h>
+	<iomanip>
+	<sstream>
+	<string.h>
+	"MapType.h"
+	"ParentChild.h"
+	"NGMapGeo.h"
+	<assert.h>
+	"../CommonTools/StringTools.h"
+	"../CommonTools/FileTools.h"
+	<unistd.h>
+
+1425519514 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/ParentChild.h
+	"CHSStdioFile.h"
+
+1425519514 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/NGPyramidMapGeo.cpp
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"NGPyramidMapGeo.h"
+
+1425519514 /hgfs/ng_emc_api_X64/CalculateModel/NGMap/NGPyramidMapGeo.h
+	"INGMapGeo.h"
+	<map>
+
+1425519514 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/ParentChild.cpp
+	"../CommonTools/StringTools.h"
+	"ParentChild.h"
+	"CHSStdioFile.h"
+
+1426059717 source:/hgfs/ng_emc_api_X64/CalculateModel/NGMap/XRWMemMap.cpp
+	"XRWMemMap.h"
+	"../XMemoryMap/XMapMemory.h"
+
+1425884867 /hgfs/ng_emc_api_X64/CalculateModel/XMemoryMap/XMapMemory.h
+	"XMemoryMatrix.h"
+
+1425519512 /hgfs/ng_emc_api_X64/CalculateModel/XMemoryMap/XMemoryMatrix.h
+	"XMemoryMapHead.h"
+	<string>
+	<map>
+

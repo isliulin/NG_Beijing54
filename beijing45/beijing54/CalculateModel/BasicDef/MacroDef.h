@@ -83,7 +83,7 @@ if(!check || (p==0))
 
 //MONITORFORMAT_TO_DBM 宏打开，读取扫频文件CScanFreqMonitorFile，读取类自动将数据转成dBm
 //MONITORFORMAT_TO_DBM宏关闭，原始数据是什么类型就是什么类型，不做转换
-#define MONITORFORMAT_TO_DBM   1
+#define MONITORFORMAT_TO_DBM   0
 
 
 enum ReportType

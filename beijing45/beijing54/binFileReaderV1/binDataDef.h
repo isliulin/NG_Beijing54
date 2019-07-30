@@ -11,6 +11,7 @@ struct scanFreqData
 	double severiceNo6;
 	double severiceNo7;
 	double severiceNo8;
+	double severiceCount;
 	scanFreqData() 
 	{
 	
@@ -24,5 +25,6 @@ struct scanFreqData
 		severiceNo6=0.0;
 		severiceNo7=0.0;
 		severiceNo8=0.0;
+		severiceCount=0.0;
 	}
 };
