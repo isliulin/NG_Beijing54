@@ -32,7 +32,9 @@ public :
 	vector<roadData> *mRoadData ;
 	vector<scanFreqData> *mFreqData;
 public:
-	map<long int,roadNode> *nodeData;
+	map<long int, roadNode> *nodeData;
+	map<long int,roadNode> *nodeData_50;
+	map<long int, roadNode> *nodeData_200;
 public :
 	spliteRoadData(string excelFileName,string binFileName);
 	~spliteRoadData();
@@ -45,15 +47,25 @@ public :
 	void setNeedReadBin(int num) { this->needReadBin = num; }
 private:
 
-	RasterResult *ngz_ser1;
-	RasterResult *ngz_ser2;
-	RasterResult *ngz_ser3;
-	RasterResult *ngz_ser4;
-	RasterResult *ngz_ser5;
-	RasterResult *ngz_ser6;
-	RasterResult *ngz_ser7;
-	RasterResult *ngz_ser8;
-	RasterResult *ngz_Elec;
+	RasterResult *ngb_ser1;
+	RasterResult *ngb_ser1_Node;
+	RasterResult *ngb_ser2;
+	RasterResult *ngb_ser2_Node;
+	RasterResult *ngb_ser3;
+	RasterResult *ngb_ser3_Node;
+	RasterResult *ngb_ser4;
+	RasterResult *ngb_ser4_Node;
+	RasterResult *ngb_ser5;
+	RasterResult *ngb_ser5_Node;
+	RasterResult *ngb_ser6;
+	RasterResult *ngb_ser6_Node;
+	RasterResult *ngb_ser7;
+	RasterResult *ngb_ser7_Node;
+	RasterResult *ngb_ser8;
+	RasterResult *ngb_ser8_Node;
+	RasterResult *ngb_Elec;
+	RasterResult *ngb_Elex_Node;
+
 public:
 	
 	void generateRaster();

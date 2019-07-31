@@ -29,7 +29,7 @@ int main()
 	////G_cMonitorScanInfo.ReadFile_Reserve(filename.c_str());
 	string filename = "C://Users//10379//Desktop//test.xlsx";
 	spliteRoadData *srd = new spliteRoadData(filename,"");
-	for (int i = 1; i <= 5; i++)
+	for (int i = 1; i <= 10; i++)
 	{
 		char* filename=NULL;
 		filename = new char[100];
@@ -38,11 +38,12 @@ int main()
 		srd->setHsfdName(filename);
 		if (i == 1)
 		{
-			srd->setNeedReadExcel(1);
+			srd->setNeedReadExcel(0);
 			srd->setNeedReadBin(1);
 		}
 		else {
 			srd->setNeedReadExcel(0);
+			
 		}
 		srd->generateNode();
 	}
