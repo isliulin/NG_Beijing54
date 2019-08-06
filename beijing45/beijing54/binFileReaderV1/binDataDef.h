@@ -1,4 +1,5 @@
 #pragma once
+#include <time.h>
 struct scanFreqData
 {
 	double lon;
@@ -12,6 +13,7 @@ struct scanFreqData
 	double severiceNo7;
 	double severiceNo8;
 	double severiceCount;
+	time_t time;
 	scanFreqData() 
 	{
 	

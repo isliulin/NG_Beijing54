@@ -20,8 +20,8 @@ ValueInTime::ValueInTime()
 {
 	pdLevelValue = NULL;
 	nValueNumber = 0;
-	//lon=0;
-	//lat=0;
+	lon=0;
+	lat=0;
 	//height=0;
 }
 ValueInTime::ValueInTime(long nValueNumber)
@@ -39,8 +39,8 @@ ValueInTime::ValueInTime(long nValueNumber)
 		}
 	    memset(pdLevelValue, 0, sizeof(float)*nValueNumber);
 	}
-	//lon=0;
-	//lat=0;
+	lon=0;
+	lat=0;
 	//height=0;
 }
 //copy¹¹Ôìº¯Êý
@@ -70,8 +70,8 @@ ValueInTime::ValueInTime(const ValueInTime& scmValueInTime)
 	{
         this->nValueNumber=0;
 	}
-	//this->lon=scmValueInTime.lon;
-//	this->lat=scmValueInTime.lat;
+	this->lon=scmValueInTime.lon;
+	this->lat=scmValueInTime.lat;
 	//this->height=scmValueInTime.height;
 	
 }
@@ -109,8 +109,8 @@ ValueInTime& ValueInTime::operator=(const ValueInTime& scmValueInTime)
 	{
        nValueNumber=0;
 	}
-	//lon=scmValueInTime.lon;
-	//lat=scmValueInTime.lat;
+	lon=scmValueInTime.lon;
+	lat=scmValueInTime.lat;
 	//height=scmValueInTime.height;
 
 	return (*this);
@@ -579,9 +579,9 @@ int CScanFreqMonitorFile::ReadStandV1_Reserve( const char *filename,eScanFreqFor
 
 #ifdef MONITORFORMAT_TO_DBM
 
-			double freqtmp=m_dFreqMhzMin+m_dFreqMhzdf*(freqindex+index);
+			/*double freqtmp=m_dFreqMhzMin+m_dFreqMhzdf*(freqindex+index);
 			float valdbm=m_pValueInTime[i].pdLevelValue[freqindex+index]-20*log10(freqtmp)-77.216;
-			m_pValueInTime[i].pdLevelValue[freqindex+index]=valdbm;
+			m_pValueInTime[i].pdLevelValue[freqindex+index]=valdbm;*/
 #endif
 
 		}
@@ -598,7 +598,7 @@ int CScanFreqMonitorFile::ReadStandV1_Reserve( const char *filename,eScanFreqFor
 	}
 
 #ifdef MONITORFORMAT_TO_DBM
-	m_DataType=0;
+	//m_DataType=0;
 #endif
 	if (ErrCode == NEED_READ_AGAIN)
 		return ErrCode;

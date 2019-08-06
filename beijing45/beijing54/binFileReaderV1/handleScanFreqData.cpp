@@ -8,7 +8,7 @@ handleScanFreqData::handleScanFreqData(string name)
 	maxy = 0.0;
 	minx = 10000000.0;
 	miny = 10000000.0;
-	mScanFreqData->reserve(3000);
+	mScanFreqData->reserve(1000);
 	
 }
 int handleScanFreqData::handleData()
@@ -21,6 +21,17 @@ int handleScanFreqData::handleData()
 	scanFreqData sfd;
 	for (int i = 0; i < valueInTimeSize; i++)
 	{
+		struct tm ti = { 0 };
+		struct tm t1 = { 0 };//初始化结构体  
+		t1.tm_year = pvalueInTime[i].tTime.wYear-1900;//年份设置为2016年  
+		t1.tm_mon = pvalueInTime[i].tTime.wMonth-1;//月份设置为11月  
+		t1.tm_mday = pvalueInTime[i].tTime.wDay;//记得tm_mday要设置  否则0就是前一天  
+		t1.tm_hour = pvalueInTime[i].tTime.wHour;
+		t1.tm_min = pvalueInTime[i].tTime.wMinute;
+		t1.tm_sec = pvalueInTime[i].tTime.wSecond;
+		mktime(&t1);
+
+	
 		double serCount = 0.0;
 		double lon = pvalueInTime[i].lon;
 		double lat = pvalueInTime[i].lat;
@@ -149,7 +160,7 @@ int handleScanFreqData::handleData()
 		sfd.severiceNo7 = ser37;
 		sfd.severiceNo8 = ser38 + ser39 + ser310 + ser311;
 		sfd.severiceCount = serCount;
-
+		sfd.time = mktime(&t1);
 		mScanFreqData[0].push_back(sfd);
 	
 	}
@@ -158,7 +169,7 @@ int handleScanFreqData::handleData()
 	return returnCode;
 }
 
-void  handleScanFreqData::clear() 
+void  handleScanFreqData::clearData() 
 {
 	maxx = 0.0;
 	maxy = 0.0;
@@ -170,5 +181,5 @@ void  handleScanFreqData::clear()
 
 handleScanFreqData::~handleScanFreqData() 
 {
-	clear();
+	clearData();
 }

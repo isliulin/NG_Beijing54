@@ -29,6 +29,7 @@ int main()
 	////G_cMonitorScanInfo.ReadFile_Reserve(filename.c_str());
 	string filename = "C://Users//10379//Desktop//test.xlsx";
 	spliteRoadData *srd = new spliteRoadData(filename,"");
+	srd->setNGBSize(1);
 	for (int i = 1; i <= 10; i++)
 	{
 		char* filename=NULL;
@@ -38,7 +39,7 @@ int main()
 		srd->setHsfdName(filename);
 		if (i == 1)
 		{
-			srd->setNeedReadExcel(0);
+			srd->setNeedReadExcel(1);
 			srd->setNeedReadBin(1);
 		}
 		else {
@@ -47,11 +48,14 @@ int main()
 		}
 		srd->generateNode();
 	}
+
 	srd->generateRaster();
 	
 	vector<roadData> *rd = srd->mRoadData;
 	vector<scanFreqData> *sfd = srd->mFreqData;
-	map<long int, roadNode> *rn = srd->nodeData;
+	map<long int, roadNode> *rn50 = srd->nodeData_50;
+	map<long int, roadNode> *rn200 = srd->nodeData_200;
+
 	/*spliteRoadData *srd = new spliteRoadData(filename,filename1);
 	srd->readBIN(filename1);
 	delete srd;*/
@@ -59,46 +63,81 @@ int main()
 	map<long int, roadNode>::iterator llyt= ll[0].begin();
 	roadNode lpok = llyt->second;*/
 	//ofstream outfileExcel("excelData.txt",ios::out);
-	//ofstream outfileBin("binData.txt", ios::out);
-	//ofstream outfileNode("NodeData.txt", ios::out);
-	//
-	///*for (auto it = rd[0].begin(); it != rd[0].end(); it++) 
-	//{
-	//	roadData temp1 = *it;
-	//	outfileExcel << temp1.mLng << ',' << temp1.mLat << ',' << temp1.mElectric << ',' << temp1.mBattery << endl;
-	//}
-	//outfileExcel.close();
-	//for (auto it = sfd[0].begin(); it != sfd[0].end(); it++)
-	//{
-	//	scanFreqData temp2 = *it;
-	//	outfileBin << temp2.lon << ',' << temp2.lat << ',' << temp2.severiceNo1 << ',' << temp2.severiceNo2 << ',' << temp2.severiceNo3<< ',' << temp2.severiceNo4 << ',' << temp2.severiceNo5 << ',' << temp2.severiceNo6 << ',' << temp2.severiceNo7 << ',' << temp2.severiceNo8 << ',' << endl;
-	//}
-	//outfileBin.close();*/
-	//for (auto it = rn[0].begin(); it != rn[0].end(); it++)
-	//{
-	//	roadNode temp2 = it->second;
-	//	outfileNode <<std::setprecision(11)<< temp2.lon<<',';
-	//	outfileNode << std::setprecision(11) << temp2.lat << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serCount << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo1 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo2 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo3 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo4 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo5 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo6 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo7 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.serNo8 << ',';
-	//	outfileNode << std::setprecision(11) << temp2.elec << ',';
-	//	outfileNode << std::setprecision(11) << temp2.battery << ',';
-	//	outfileNode << std::setprecision(11) << temp2.binNodeNum << ',';
-	//	outfileNode << std::setprecision(11) << temp2.roadNodeNum << ',';
-	//	outfileNode << std::setprecision(11) << temp2.excelNodeNum << ',';
-	//	outfileNode << std::setprecision(11) << temp2.rowNum << ',';
-	//	outfileNode << std::setprecision(11) << temp2.colNum << endl;
-
-	//}
-	//outfileNode.close();
+	ofstream outfileNode50("NodeData50.txt", ios::out);
+	ofstream outfileNode200("NodeData200.txt", ios::out);
 	
+	/*for (auto it = rd[0].begin(); it != rd[0].end(); it++) 
+	{
+		roadData temp1 = *it;
+		outfileExcel << temp1.mLng << ',' << temp1.mLat << ',' << temp1.mElectric << ',' << temp1.mBattery << endl;
+	}
+	outfileExcel.close();
+	for (auto it = sfd[0].begin(); it != sfd[0].end(); it++)
+	{
+		scanFreqData temp2 = *it;
+		outfileBin << temp2.lon << ',' << temp2.lat << ',' << temp2.severiceNo1 << ',' << temp2.severiceNo2 << ',' << temp2.severiceNo3<< ',' << temp2.severiceNo4 << ',' << temp2.severiceNo5 << ',' << temp2.severiceNo6 << ',' << temp2.severiceNo7 << ',' << temp2.severiceNo8 << ',' << endl;
+	}
+	outfileBin.close();*/
+	for (auto it = rn50[0].begin(); it != rn50[0].end(); it++)
+	{
+		roadNode temp2 = it->second;
+		outfileNode50 <<std::setprecision(11)<< temp2.lon<<',';
+		outfileNode50 << std::setprecision(11) << temp2.lat << ',';
+		outfileNode50 << std::setprecision(11) << temp2.time<< ',';
+		outfileNode50 << std::setprecision(11) << temp2.serCount<<',';
+ 		outfileNode50 << std::setprecision(11) << temp2.serNo1 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.serNo2 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.serNo3 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.serNo4 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.serNo5 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.serNo6 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.serNo7 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.serNo8 << ',';
+		outfileNode50 << std::setprecision(11) << temp2.elec << ',';
+		outfileNode50 << std::setprecision(11) << temp2.battery << ',';
+		outfileNode50 << std::setprecision(11) << temp2.binNodeNum << ',';
+		outfileNode50 << std::setprecision(11) << temp2.roadNodeNum << ',';
+		outfileNode50 << std::setprecision(11) << temp2.excelNodeNum << ',';
+		outfileNode50 << std::setprecision(11) << temp2.rowNum << ',';
+		outfileNode50 << std::setprecision(11) << temp2.colNum << endl;
+
+	}
+	outfileNode50.close();
+	for (auto it = rn200[0].begin(); it != rn200[0].end(); it++)
+	{
+		roadNode temp2 = it->second;
+		outfileNode200 << std::setprecision(11) << temp2.lon << ',';
+		outfileNode200 << std::setprecision(11) << temp2.lat << ',';
+		outfileNode200 << std::setprecision(11) << temp2.time << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serCount << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo1 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo2 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo3 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo4 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo5 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo6 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo7 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.serNo8 << ',';
+		outfileNode200 << std::setprecision(11) << temp2.elec << ',';
+		outfileNode200 << std::setprecision(11) << temp2.battery << ',';
+		outfileNode200 << std::setprecision(11) << temp2.binNodeNum << ',';
+		outfileNode200 << std::setprecision(11) << temp2.roadNodeNum << ',';
+		outfileNode200 << std::setprecision(11) << temp2.excelNodeNum << ',';
+		outfileNode200 << std::setprecision(11) << temp2.rowNum << ',';
+		outfileNode200 << std::setprecision(11) << temp2.colNum << endl;
+
+	}
+	outfileNode200.close();
+	vector<double *> *mhn = srd->threeNodeVector;
+	ofstream threeNode("threeNode.txt",ios::out);
+	for (auto it = mhn[0].begin(); it != mhn[0].end(); it++) 
+	{
+		double* temp = *it;
+		for(int i=0;i<30;i++)
+			threeNode << std::setprecision(11) << temp[i] << ',';
+		threeNode << endl;
+	}
+
 	int a = 1;
 #else
 	string filename = "C://Users//10379//Desktop//test.xlsx";

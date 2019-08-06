@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "exportDefine.h"
 #include <iostream>
+#include <ostream>
 #include <vector>
 #include "../CalculateModel/BasicDef/ScanFreqMonitorFile.h"
 #include "../xlsxFileReader/handleData.h"
@@ -24,10 +25,12 @@ private:
 	handleRoadData *hrd;
 	handleScanFreqData *hsfd;
 public:
+	int size;
 	double minx;
 	double miny;
 	double maxx;
 	double maxy;
+	vector<double*> *threeNodeVector;
 public :	
 	vector<roadData> *mRoadData ;
 	vector<scanFreqData> *mFreqData;
@@ -45,6 +48,7 @@ public :
 	void generateNode();
 	void setNeedReadExcel(int num) { this->needReadExcel = num; }
 	void setNeedReadBin(int num) { this->needReadBin = num; }
+	void setNGBSize(int size) { this->size = size; }
 private:
 
 	RasterResult *ngb_ser1;
@@ -64,11 +68,11 @@ private:
 	RasterResult *ngb_ser8;
 	RasterResult *ngb_ser8_Node;
 	RasterResult *ngb_Elec;
-	RasterResult *ngb_Elex_Node;
-
-public:
+	RasterResult *ngb_Elec_Node;
 	
-	void generateRaster();
-
-
+public:
+	//void generThreeNode(string flag,int i);
+	void generateRaster(); //generate S/B RasterResult (ser1-ser8)
+	void generateMergeRaster(double DATA_LEVEL,int i); // generate ser1_Node;
+	//void generateMergeRaster_1(double DATA_LEVEL, int i);
 };
